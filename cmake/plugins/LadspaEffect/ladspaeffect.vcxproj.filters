@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\LadspaEffect\LadspaEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\LadspaEffect\LadspaControls.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\LadspaEffect\LadspaControlDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\LadspaEffect\LadspaSubPluginFeatures.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\LadspaEffect\moc_LadspaEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\LadspaEffect\moc_LadspaControls.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\LadspaEffect\moc_LadspaControlDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\LadspaEffect\LadspaEffect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\LadspaEffect\LadspaControls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\LadspaEffect\LadspaControlDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\LadspaEffect\LadspaSubPluginFeatures.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\8eb475ebb9929f3c77ad45e157f0c48a\embedded_resources.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\8eb475ebb9929f3c77ad45e157f0c48a\moc_LadspaEffect.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\8eb475ebb9929f3c77ad45e157f0c48a\moc_LadspaControls.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\8eb475ebb9929f3c77ad45e157f0c48a\moc_LadspaControlDialog.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\LadspaEffect\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A83DCC89-D78F-33A4-9C4D-F24716CDD74A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{9F365683-3D39-36C3-A771-438F02FB97ED}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{781A3A1A-BC3A-3ACB-BD03-6FF33536870D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

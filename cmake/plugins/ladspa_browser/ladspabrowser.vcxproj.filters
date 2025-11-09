@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\ladspa_browser\ladspa_browser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\ladspa_browser\ladspa_description.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\ladspa_browser\ladspa_port_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\ladspa_browser\moc_ladspa_browser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\ladspa_browser\moc_ladspa_description.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\ladspa_browser\moc_ladspa_port_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\ladspa_browser\ladspa_browser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\ladspa_browser\ladspa_description.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\ladspa_browser\ladspa_port_dialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\c78a5eba28946b977f3795500410056a\embedded_resources.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\c78a5eba28946b977f3795500410056a\moc_ladspa_browser.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\c78a5eba28946b977f3795500410056a\moc_ladspa_description.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\c78a5eba28946b977f3795500410056a\moc_ladspa_port_dialog.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\ladspa_browser\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A83DCC89-D78F-33A4-9C4D-F24716CDD74A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{9F365683-3D39-36C3-A771-438F02FB97ED}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{781A3A1A-BC3A-3ACB-BD03-6FF33536870D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

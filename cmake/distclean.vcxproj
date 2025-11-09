@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DE684059-54E5-357A-B258-357AAB159DF1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>distclean</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\b1c9af9596b6ea42e977b9e2f9eb8b34\distclean.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+make clean
+if %errorlevel% neq 0 goto :cmEnd
+rm -rf `find -name cmake_install.cmake` `find -name Makefile` `find -type d -name CMakeFiles` CMakeCache.txt lmmsconfig.h lmms.1.gz
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\distclean</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+make clean
+if %errorlevel% neq 0 goto :cmEnd
+rm -rf `find -name cmake_install.cmake` `find -name Makefile` `find -type d -name CMakeFiles` CMakeCache.txt lmmsconfig.h lmms.1.gz
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\distclean</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+make clean
+if %errorlevel% neq 0 goto :cmEnd
+rm -rf `find -name cmake_install.cmake` `find -name Makefile` `find -type d -name CMakeFiles` CMakeCache.txt lmmsconfig.h lmms.1.gz
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\distclean</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+make clean
+if %errorlevel% neq 0 goto :cmEnd
+rm -rf `find -name cmake_install.cmake` `find -name Makefile` `find -type d -name CMakeFiles` CMakeCache.txt lmmsconfig.h lmms.1.gz
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\distclean</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/amigo/source/repos/LMMS/lmms/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/amigo/source/repos/LMMS/lmms -BC:/Users/amigo/source/repos/LMMS/lmms/cmake --check-stamp-file C:/Users/amigo/source/repos/LMMS/lmms/cmake/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.31\Modules\AddFileDependencies.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CheckIncludeFiles.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindFLTK.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindSDL.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\SelectLibraryConfigurations.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\3.31.5\CMakeCCompiler.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\3.31.5\CMakeCXXCompiler.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\3.31.5\CMakeRCCompiler.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\3.31.5\CMakeSystem.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\DetectMachine.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\FindLame.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\FindOggVorbis.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\FindPortaudio.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\FindSTK.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\FindWine.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\MinGWCrossCompile.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\VersionInfo.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\Win32Toolchain.cmake;C:\msys64\mingw64\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\msys64\mingw64\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\msys64\mingw64\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;C:\msys64\mingw64\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\msys64\mingw64\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QSvgIconPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QSvgPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Test\Qt5TestConfig.cmake;C:\msys64\mingw64\lib\cmake\Qt5Test\Qt5TestConfigExtras.cmake;C:\msys64\mingw64\lib\cmake\Qt5Test\Qt5TestConfigVersion.cmake;C:\msys64\mingw64\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\msys64\mingw64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\msys64\mingw64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\msys64\mingw64\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\msys64\mingw64\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Xml\Qt5XmlConfig.cmake;C:\msys64\mingw64\lib\cmake\Qt5Xml\Qt5XmlConfigVersion.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/amigo/source/repos/LMMS/lmms/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/amigo/source/repos/LMMS/lmms -BC:/Users/amigo/source/repos/LMMS/lmms/cmake --check-stamp-file C:/Users/amigo/source/repos/LMMS/lmms/cmake/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.31\Modules\AddFileDependencies.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CheckIncludeFiles.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindFLTK.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindSDL.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\SelectLibraryConfigurations.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\3.31.5\CMakeCCompiler.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\3.31.5\CMakeCXXCompiler.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\3.31.5\CMakeRCCompiler.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\3.31.5\CMakeSystem.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\DetectMachine.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\FindLame.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\FindOggVorbis.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\FindPortaudio.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\FindSTK.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\FindWine.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\MinGWCrossCompile.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\VersionInfo.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\Win32Toolchain.cmake;C:\msys64\mingw64\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\msys64\mingw64\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\msys64\mingw64\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;C:\msys64\mingw64\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\msys64\mingw64\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QSvgIconPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QSvgPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Test\Qt5TestConfig.cmake;C:\msys64\mingw64\lib\cmake\Qt5Test\Qt5TestConfigExtras.cmake;C:\msys64\mingw64\lib\cmake\Qt5Test\Qt5TestConfigVersion.cmake;C:\msys64\mingw64\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\msys64\mingw64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\msys64\mingw64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\msys64\mingw64\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\msys64\mingw64\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Xml\Qt5XmlConfig.cmake;C:\msys64\mingw64\lib\cmake\Qt5Xml\Qt5XmlConfigVersion.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/amigo/source/repos/LMMS/lmms/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/amigo/source/repos/LMMS/lmms -BC:/Users/amigo/source/repos/LMMS/lmms/cmake --check-stamp-file C:/Users/amigo/source/repos/LMMS/lmms/cmake/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.31\Modules\AddFileDependencies.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CheckIncludeFiles.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindFLTK.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindSDL.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\SelectLibraryConfigurations.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\3.31.5\CMakeCCompiler.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\3.31.5\CMakeCXXCompiler.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\3.31.5\CMakeRCCompiler.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\3.31.5\CMakeSystem.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\DetectMachine.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\FindLame.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\FindOggVorbis.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\FindPortaudio.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\FindSTK.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\FindWine.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\MinGWCrossCompile.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\VersionInfo.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\Win32Toolchain.cmake;C:\msys64\mingw64\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\msys64\mingw64\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\msys64\mingw64\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;C:\msys64\mingw64\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\msys64\mingw64\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QSvgIconPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QSvgPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Test\Qt5TestConfig.cmake;C:\msys64\mingw64\lib\cmake\Qt5Test\Qt5TestConfigExtras.cmake;C:\msys64\mingw64\lib\cmake\Qt5Test\Qt5TestConfigVersion.cmake;C:\msys64\mingw64\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\msys64\mingw64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\msys64\mingw64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\msys64\mingw64\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\msys64\mingw64\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Xml\Qt5XmlConfig.cmake;C:\msys64\mingw64\lib\cmake\Qt5Xml\Qt5XmlConfigVersion.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/amigo/source/repos/LMMS/lmms/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/amigo/source/repos/LMMS/lmms -BC:/Users/amigo/source/repos/LMMS/lmms/cmake --check-stamp-file C:/Users/amigo/source/repos/LMMS/lmms/cmake/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.31\Modules\AddFileDependencies.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CheckIncludeFiles.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindFLTK.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindSDL.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\SelectLibraryConfigurations.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\3.31.5\CMakeCCompiler.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\3.31.5\CMakeCXXCompiler.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\3.31.5\CMakeRCCompiler.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\3.31.5\CMakeSystem.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\DetectMachine.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\FindLame.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\FindOggVorbis.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\FindPortaudio.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\FindSTK.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\FindWine.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\MinGWCrossCompile.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\VersionInfo.cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\Win32Toolchain.cmake;C:\msys64\mingw64\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\msys64\mingw64\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\msys64\mingw64\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;C:\msys64\mingw64\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\msys64\mingw64\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QSvgIconPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QSvgPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Test\Qt5TestConfig.cmake;C:\msys64\mingw64\lib\cmake\Qt5Test\Qt5TestConfigExtras.cmake;C:\msys64\mingw64\lib\cmake\Qt5Test\Qt5TestConfigVersion.cmake;C:\msys64\mingw64\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\msys64\mingw64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\msys64\mingw64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\msys64\mingw64\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\msys64\mingw64\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;C:\msys64\mingw64\lib\cmake\Qt5Xml\Qt5XmlConfig.cmake;C:\msys64\mingw64\lib\cmake\Qt5Xml\Qt5XmlConfigVersion.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\distclean">
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\ZERO_CHECK.vcxproj">
+      <Project>{146FE8A8-C58C-3C14-9BBD-DF14A34D466D}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

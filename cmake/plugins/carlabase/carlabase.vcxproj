@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{22DE9E78-6EB7-3228-84AC-2E21D09A997B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>carlabase</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">carlabase.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">carlabase</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">carlabase.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">carlabase</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">carlabase.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">carlabase</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">carlabase.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">carlabase</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\includes;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\utils;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\backend;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\autoconf;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/msys64/mingw64/include" /external:I "C:/msys64/mingw64/include/QtCore" /external:I "C:/msys64/mingw64/share/qt5/mkspecs/win32-g++" /external:I "C:/msys64/mingw64/include/QtGui" /external:I "C:/msys64/mingw64/include/QtWidgets" /external:I "C:/msys64/mingw64/include/QtXml" -fno-exceptions -Werror=unused-function -Wno-sign-compare -Wno-strict-overflow -march=pentium3 -mtune=generic -mpreferred-stack-boundary=5 -mfpmath=sse -Wno-attributes -std=c++0x</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;LMMS_DEBUG;PLUGIN_NAME=carlabase;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_XML_LIB;CMAKE_INTDIR="Debug";carlabase_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;LMMS_DEBUG;PLUGIN_NAME=carlabase;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_XML_LIB;CMAKE_INTDIR=\"Debug\";carlabase_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\includes;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\utils;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\backend;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\autoconf;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\includes;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\utils;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\backend;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\autoconf;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+\opt\mingw32\bin\i686-w64-mingw32-strip C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/Debug/carlabase.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>Debug\carla_native-plugin.lib;C:\msys64\mingw64\lib\libQt5Widgets.dll.a;C:\msys64\mingw64\lib\libQt5Xml.dll.a;..\..\src\Debug\lmms.lib;C:\msys64\mingw64\lib\libQt5Gui.dll.a;C:\msys64\mingw64\lib\libQt5Core.dll.a;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>/opt/mingw32/lib;/opt/mingw32/lib/$(Configuration);/opt/mingw32/bin;/opt/mingw32/bin/$(Configuration);C:/Users/amigo/source/repos/LMMS/lmms/cmake;C:/Users/amigo/source/repos/LMMS/lmms/cmake/$(Configuration);C:/Users/amigo/source/repos/LMMS/lmms;C:/Users/amigo/source/repos/LMMS/lmms/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/carlabase/Debug/carlabase.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/Debug/carlabase.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\includes;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\utils;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\backend;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\autoconf;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/msys64/mingw64/include" /external:I "C:/msys64/mingw64/include/QtCore" /external:I "C:/msys64/mingw64/share/qt5/mkspecs/win32-g++" /external:I "C:/msys64/mingw64/include/QtGui" /external:I "C:/msys64/mingw64/include/QtWidgets" /external:I "C:/msys64/mingw64/include/QtXml" -fno-exceptions -Werror=unused-function -Wno-sign-compare -Wno-strict-overflow -march=pentium3 -mtune=generic -mpreferred-stack-boundary=5 -mfpmath=sse -Wno-attributes -std=c++0x</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLUGIN_NAME=carlabase;QT_CORE_LIB;QT_NO_DEBUG;QT_GUI_LIB;QT_WIDGETS_LIB;QT_XML_LIB;CMAKE_INTDIR="Release";carlabase_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLUGIN_NAME=carlabase;QT_CORE_LIB;QT_NO_DEBUG;QT_GUI_LIB;QT_WIDGETS_LIB;QT_XML_LIB;CMAKE_INTDIR=\"Release\";carlabase_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\includes;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\utils;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\backend;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\autoconf;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\includes;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\utils;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\backend;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\autoconf;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+\opt\mingw32\bin\i686-w64-mingw32-strip C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/Release/carlabase.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>Release\carla_native-plugin.lib;C:\msys64\mingw64\lib\libQt5Widgets.dll.a;C:\msys64\mingw64\lib\libQt5Xml.dll.a;..\..\src\Release\lmms.lib;C:\msys64\mingw64\lib\libQt5Gui.dll.a;C:\msys64\mingw64\lib\libQt5Core.dll.a;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>/opt/mingw32/lib;/opt/mingw32/lib/$(Configuration);/opt/mingw32/bin;/opt/mingw32/bin/$(Configuration);C:/Users/amigo/source/repos/LMMS/lmms/cmake;C:/Users/amigo/source/repos/LMMS/lmms/cmake/$(Configuration);C:/Users/amigo/source/repos/LMMS/lmms;C:/Users/amigo/source/repos/LMMS/lmms/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/carlabase/Release/carlabase.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/Release/carlabase.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\includes;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\utils;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\backend;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\autoconf;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/msys64/mingw64/include" /external:I "C:/msys64/mingw64/include/QtCore" /external:I "C:/msys64/mingw64/share/qt5/mkspecs/win32-g++" /external:I "C:/msys64/mingw64/include/QtGui" /external:I "C:/msys64/mingw64/include/QtWidgets" /external:I "C:/msys64/mingw64/include/QtXml" -fno-exceptions -Werror=unused-function -Wno-sign-compare -Wno-strict-overflow -march=pentium3 -mtune=generic -mpreferred-stack-boundary=5 -mfpmath=sse -Wno-attributes -std=c++0x</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLUGIN_NAME=carlabase;QT_CORE_LIB;QT_NO_DEBUG;QT_GUI_LIB;QT_WIDGETS_LIB;QT_XML_LIB;CMAKE_INTDIR="MinSizeRel";carlabase_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLUGIN_NAME=carlabase;QT_CORE_LIB;QT_NO_DEBUG;QT_GUI_LIB;QT_WIDGETS_LIB;QT_XML_LIB;CMAKE_INTDIR=\"MinSizeRel\";carlabase_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\includes;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\utils;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\backend;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\autoconf;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\includes;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\utils;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\backend;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\autoconf;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+\opt\mingw32\bin\i686-w64-mingw32-strip C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/MinSizeRel/carlabase.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>MinSizeRel\carla_native-plugin.lib;C:\msys64\mingw64\lib\libQt5Widgets.dll.a;C:\msys64\mingw64\lib\libQt5Xml.dll.a;..\..\src\MinSizeRel\lmms.lib;C:\msys64\mingw64\lib\libQt5Gui.dll.a;C:\msys64\mingw64\lib\libQt5Core.dll.a;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>/opt/mingw32/lib;/opt/mingw32/lib/$(Configuration);/opt/mingw32/bin;/opt/mingw32/bin/$(Configuration);C:/Users/amigo/source/repos/LMMS/lmms/cmake;C:/Users/amigo/source/repos/LMMS/lmms/cmake/$(Configuration);C:/Users/amigo/source/repos/LMMS/lmms;C:/Users/amigo/source/repos/LMMS/lmms/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/carlabase/MinSizeRel/carlabase.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/MinSizeRel/carlabase.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\includes;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\utils;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\backend;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\autoconf;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/msys64/mingw64/include" /external:I "C:/msys64/mingw64/include/QtCore" /external:I "C:/msys64/mingw64/share/qt5/mkspecs/win32-g++" /external:I "C:/msys64/mingw64/include/QtGui" /external:I "C:/msys64/mingw64/include/QtWidgets" /external:I "C:/msys64/mingw64/include/QtXml" -fno-exceptions -Werror=unused-function -Wno-sign-compare -Wno-strict-overflow -march=pentium3 -mtune=generic -mpreferred-stack-boundary=5 -mfpmath=sse -Wno-attributes -std=c++0x</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLUGIN_NAME=carlabase;QT_CORE_LIB;QT_NO_DEBUG;QT_GUI_LIB;QT_WIDGETS_LIB;QT_XML_LIB;CMAKE_INTDIR="RelWithDebInfo";carlabase_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLUGIN_NAME=carlabase;QT_CORE_LIB;QT_NO_DEBUG;QT_GUI_LIB;QT_WIDGETS_LIB;QT_XML_LIB;CMAKE_INTDIR=\"RelWithDebInfo\";carlabase_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\includes;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\utils;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\backend;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\autoconf;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\includes;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\utils;C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla\source\backend;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\autoconf;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+\opt\mingw32\bin\i686-w64-mingw32-strip C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/RelWithDebInfo/carlabase.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>RelWithDebInfo\carla_native-plugin.lib;C:\msys64\mingw64\lib\libQt5Widgets.dll.a;C:\msys64\mingw64\lib\libQt5Xml.dll.a;..\..\src\RelWithDebInfo\lmms.lib;C:\msys64\mingw64\lib\libQt5Gui.dll.a;C:\msys64\mingw64\lib\libQt5Core.dll.a;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>/opt/mingw32/lib;/opt/mingw32/lib/$(Configuration);/opt/mingw32/bin;/opt/mingw32/bin/$(Configuration);C:/Users/amigo/source/repos/LMMS/lmms/cmake;C:/Users/amigo/source/repos/LMMS/lmms/cmake/$(Configuration);C:/Users/amigo/source/repos/LMMS/lmms;C:/Users/amigo/source/repos/LMMS/lmms/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/carlabase/RelWithDebInfo/carlabase.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/RelWithDebInfo/carlabase.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\5142b1fca10728b52f2939091ba2974a\embedded_resources.h.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating embedded_resources.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+..\..\bin2res C:/Users/amigo/source/repos/LMMS/lmms/plugins/carlabase/artwork-patchbay.png C:/Users/amigo/source/repos/LMMS/lmms/plugins/carlabase/artwork-rack.png C:/Users/amigo/source/repos/LMMS/lmms/plugins/carlabase/logo.png &gt; C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/carlabase/embedded_resources.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\embedded_resources.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating embedded_resources.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+..\..\bin2res C:/Users/amigo/source/repos/LMMS/lmms/plugins/carlabase/artwork-patchbay.png C:/Users/amigo/source/repos/LMMS/lmms/plugins/carlabase/artwork-rack.png C:/Users/amigo/source/repos/LMMS/lmms/plugins/carlabase/logo.png &gt; C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/carlabase/embedded_resources.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\embedded_resources.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating embedded_resources.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+..\..\bin2res C:/Users/amigo/source/repos/LMMS/lmms/plugins/carlabase/artwork-patchbay.png C:/Users/amigo/source/repos/LMMS/lmms/plugins/carlabase/artwork-rack.png C:/Users/amigo/source/repos/LMMS/lmms/plugins/carlabase/logo.png &gt; C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/carlabase/embedded_resources.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\embedded_resources.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating embedded_resources.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+..\..\bin2res C:/Users/amigo/source/repos/LMMS/lmms/plugins/carlabase/artwork-patchbay.png C:/Users/amigo/source/repos/LMMS/lmms/plugins/carlabase/artwork-rack.png C:/Users/amigo/source/repos/LMMS/lmms/plugins/carlabase/logo.png &gt; C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/carlabase/embedded_resources.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\embedded_resources.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\5142b1fca10728b52f2939091ba2974a\moc_carla.cpp.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating moc_carla.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\moc.exe @C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/carlabase/moc_carla.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\moc_carla.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating moc_carla.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\moc.exe @C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/carlabase/moc_carla.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\moc_carla.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating moc_carla.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\moc.exe @C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/carlabase/moc_carla.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\moc_carla.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating moc_carla.cpp</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\moc.exe @C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/carlabase/moc_carla.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\moc_carla.cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/amigo/source/repos/LMMS/lmms/plugins/carlabase/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/amigo/source/repos/LMMS/lmms -BC:/Users/amigo/source/repos/LMMS/lmms/cmake --check-stamp-file C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/carlabase/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\BuildPlugin.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/amigo/source/repos/LMMS/lmms/plugins/carlabase/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/amigo/source/repos/LMMS/lmms -BC:/Users/amigo/source/repos/LMMS/lmms/cmake --check-stamp-file C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/carlabase/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\BuildPlugin.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/amigo/source/repos/LMMS/lmms/plugins/carlabase/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/amigo/source/repos/LMMS/lmms -BC:/Users/amigo/source/repos/LMMS/lmms/cmake --check-stamp-file C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/carlabase/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\BuildPlugin.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/amigo/source/repos/LMMS/lmms/plugins/carlabase/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/amigo/source/repos/LMMS/lmms -BC:/Users/amigo/source/repos/LMMS/lmms/cmake --check-stamp-file C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/carlabase/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\modules\BuildPlugin.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla.cpp" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\carlabase\carla.h" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\moc_carla.cpp" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\ZERO_CHECK.vcxproj">
+      <Project>{146FE8A8-C58C-3C14-9BBD-DF14A34D466D}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\bin2res.vcxproj">
+      <Project>{8D41F7C5-5ABD-3963-8173-EEE05DD9E410}</Project>
+      <Name>bin2res</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\carlabase\carla_native-plugin.vcxproj">
+      <Project>{CE8F0BA5-BD79-3E8E-B306-9C3BAD27842A}</Project>
+      <Name>carla_native-plugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmms.vcxproj">
+      <Project>{8B7D3FB6-C56A-325D-9DFD-79FB56C075C7}</Project>
+      <Name>lmms</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

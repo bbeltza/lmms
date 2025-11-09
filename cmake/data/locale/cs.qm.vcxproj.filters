@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\3800aef3b563011bfda1139ab01edc3b\cs.qm.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\data\locale\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\data\locale\CMakeFiles\cs.qm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A83DCC89-D78F-33A4-9C4D-F24716CDD74A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

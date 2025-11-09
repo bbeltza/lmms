@@ -44,6 +44,8 @@ typedef QList<const NotePlayHandle *> ConstNotePlayHandleList;
 class EXPORT NotePlayHandle : public PlayHandle, public Note
 {
 	MM_OPERATORS
+private:
+    class BaseDetuning;
 public:
 	void * m_pluginData;
 	BasicFilters<> * m_filter;
@@ -261,6 +263,11 @@ public:
 	{
 		m_frequencyNeedsUpdate = true;
 	}
+
+    float currentDetuning() const
+    {
+        return m_baseDetuning->value();
+    }
 
 private:
 	class BaseDetuning

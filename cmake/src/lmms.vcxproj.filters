@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmms_autogen\mocs_compilation_Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmms_autogen\mocs_compilation_Release.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmms_autogen\mocs_compilation_MinSizeRel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmms_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\3202685e04ff535ef21a5ff8ecf57870\lmmsrc.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\mocs_compilation_Debug.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AutomatableModel.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AutomationPattern.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\BandLimitedWave.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\base64.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\BBTrackContainer.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\BufferManager.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\Clipboard.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\ComboBoxModel.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\ConfigManager.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\Controller.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\ControllerConnection.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\DataFile.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\DrumSynth.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\Effect.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\EffectChain.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\Engine.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\EnvelopeAndLfoParameters.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\fft_helpers.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\FxMixer.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\ImportFilter.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\InlineAutomation.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\Instrument.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\InstrumentFunctions.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\InstrumentPlayHandle.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\InstrumentSoundShaping.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\JournallingObject.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\Ladspa2LMMS.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\LadspaControl.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\LadspaManager.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\LfoController.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\LocklessAllocator.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\MemoryHelper.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\MemoryManager.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\MeterModel.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\Mixer.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\MixerProfiler.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\MixerWorkerThread.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\MixHelpers.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\Model.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\Note.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\NotePlayHandle.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\Oscillator.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\PeakController.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\Piano.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\PlayHandle.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\Plugin.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\PluginFactory.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\PresetPreviewPlayHandle.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\ProjectJournal.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\ProjectRenderer.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\ProjectVersion.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\RemotePlugin.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\RenderManager.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\RingBuffer.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\SampleBuffer.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\SamplePlayHandle.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\SampleRecordHandle.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\SerializingObject.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\Song.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\TempoSyncKnobModel.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\ToolPlugin.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\Track.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\TrackContainer.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\ValueBuffer.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\VstSyncController.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AudioAlsa.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AudioDevice.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AudioFileDevice.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AudioFileMP3.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AudioFileOgg.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AudioFileWave.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AudioJack.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AudioOss.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AudioSndio.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AudioPort.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AudioPortAudio.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AudioSoundIo.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AudioPulseAudio.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AudioSampleRecorder.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AudioSdl.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\MidiAlsaRaw.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\MidiAlsaSeq.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\MidiClient.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\MidiController.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\MidiJack.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\MidiOss.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\MidiSndio.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\MidiApple.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\MidiPort.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\MidiTime.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\MidiWinMM.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AboutDialog.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\ActionGroup.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AudioAlsaSetupWidget.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AudioDeviceSetupWidget.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AutomatableModelView.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AutomationPatternView.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\ControllerConnectionDialog.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\ControllerDialog.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\EffectControlDialog.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\EffectSelectDialog.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\embed.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\ExportProjectDialog.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\FileBrowser.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\FxMixerView.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\GuiApplication.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\InstrumentView.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\LfoControllerDialog.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\LmmsPalette.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\LmmsStyle.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\MainApplication.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\MainWindow.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\MidiSetupWidget.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\ModelView.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\PeakControllerDialog.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\PianoView.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\PluginBrowser.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\RowTableView.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\SetupDialog.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\StringPairDrag.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\SubWindow.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\TimeLineWidget.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\ToolPluginView.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\TrackContainerView.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\FileDialog.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\VersionedSaveDialog.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AutomationEditor.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\BBEditor.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\Editor.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\PianoRoll.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\SongEditor.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AutomatableButton.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AutomatableSlider.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\CaptionMenu.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\ComboBox.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\ControllerRackView.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\ControllerView.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\CPULoadWidget.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\EffectRackView.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\EffectView.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\EnvelopeAndLfoView.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\FadeButton.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\Fader.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\FxLine.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\Graph.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\GroupBox.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\InstrumentFunctionViews.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\InstrumentMidiIOView.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\InstrumentSoundShapingView.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\LeftRightNav.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\Knob.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\LadspaControlView.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\LcdSpinBox.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\LcdWidget.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\LedCheckbox.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\MeterDialog.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\MidiPortMenu.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\NStateButton.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\PixmapButton.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\ProjectNotes.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\RenameDialog.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\Rubberband.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\SendButtonIndicator.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\SideBar.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\SideBarWidget.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\TabBar.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\TabWidget.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\TempoSyncKnob.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\TextFloat.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\TimeDisplayWidget.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\ToolButton.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\ToolTip.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\TrackLabelButton.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\TrackRenameLineEdit.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\VisualizationWidget.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\AutomationTrack.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\BBTrack.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\InstrumentTrack.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\Pattern.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\SampleTrack.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\lmmsrc.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\mocs_compilation_Release.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\mocs_compilation_MinSizeRel.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs.dir\$(Configuration)\mocs_compilation_RelWithDebInfo.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A83DCC89-D78F-33A4-9C4D-F24716CDD74A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object Files">
+      <UniqueIdentifier>{1B223808-B969-30BD-83CD-0078DD3F9488}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object Libraries">
+      <UniqueIdentifier>{9656662F-DF80-3457-8F60-B00AD0E3E826}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{781A3A1A-BC3A-3ACB-BD03-6FF33536870D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

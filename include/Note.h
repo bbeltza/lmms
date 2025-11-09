@@ -27,6 +27,7 @@
 #define NOTE_H
 
 #include <QtCore/QVector>
+#include <memory>
 
 #include "volume.h"
 #include "panning.h"
@@ -86,7 +87,7 @@ public:
 		int key = DefaultKey,
 		volume_t volume = DefaultVolume,
 		panning_t panning = DefaultPanning,
-		DetuningHelper * detuning = NULL );
+        std::shared_ptr<DetuningHelper> detuning = NULL );
 	Note( const Note & note );
 	virtual ~Note();
 
@@ -207,15 +208,12 @@ public:
 
 	static MidiTime quantized( const MidiTime & m, const int qGrid );
 
-	DetuningHelper * detuning() const
-	{
-		return m_detuning;
-	}
+    const std::shared_ptr<DetuningHelper>& detuning() const{ return m_detuning; }
+
 	bool hasDetuningInfo() const;
 	bool withinRange(int tickStart, int tickEnd) const;
 
 	void createDetuning();
-
 
 protected:
 	virtual void saveSettings( QDomDocument & doc, QDomElement & parent );
@@ -235,7 +233,7 @@ private:
 	panning_t m_panning;
 	MidiTime m_length;
 	MidiTime m_pos;
-	DetuningHelper * m_detuning;
+    std::shared_ptr<DetuningHelper> m_detuning;
 };
 
 

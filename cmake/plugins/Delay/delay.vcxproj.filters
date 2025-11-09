@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\Delay\DelayEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\Delay\DelayControls.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\Delay\DelayControlsDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\Delay\Lfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\Delay\StereoDelay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\Delay\moc_DelayControls.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\Delay\moc_DelayControlsDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\Delay\__\Eq\moc_EqFader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\84ea62cb9185bc502d68f398634e2c1b\embedded_resources.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\84ea62cb9185bc502d68f398634e2c1b\moc_DelayControls.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\84ea62cb9185bc502d68f398634e2c1b\moc_DelayControlsDialog.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\be0517d3058651f0aea169d314d35ec5\moc_EqFader.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\Delay\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A83DCC89-D78F-33A4-9C4D-F24716CDD74A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{781A3A1A-BC3A-3ACB-BD03-6FF33536870D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

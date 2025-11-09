@@ -36,6 +36,7 @@
 #include "InstrumentPlayHandle.h"
 #include "Mixer.h"
 #include "NotePlayHandle.h"
+#include "DetuningHelper.h"
 #include "Knob.h"
 #include "SampleBuffer.h"
 #include "Song.h"
@@ -53,7 +54,7 @@ extern "C"
 Plugin::Descriptor PLUGIN_EXPORT sf2player_plugin_descriptor =
 {
 	STRINGIFY( PLUGIN_NAME ),
-	"Sf2 Player",
+    "Sf2 Player",
 	QT_TRANSLATE_NOOP( "pluginBrowser", "Player for SoundFont files" ),
 	"Paul Giblock <drfaygo/at/gmail/dot/com>",
 	0x0100,
@@ -65,13 +66,45 @@ Plugin::Descriptor PLUGIN_EXPORT sf2player_plugin_descriptor =
 
 }
 
+/**
+ * A non-owning reference to a single FluidSynth voice. Captures some initial
+ * properties of the referenced voice to help manage changes to it over time.
+ */
+class FluidVoice
+{
+public:
+    //! Create a reference to the voice currently pointed at by `voice`.
+    explicit FluidVoice(fluid_voice_t* voice) :
+        m_voice{voice},
+        m_id{fluid_voice_get_id(voice)},
+        m_coarseTune{fluid_voice_gen_get(voice, GEN_COARSETUNE)}
+    { }
+
+    //! Get a pointer to the referenced voice.
+    fluid_voice_t* get() const noexcept { return m_voice; }
+
+    //! Get the original coarse tuning of the referenced voice.
+    float coarseTune() const noexcept { return m_coarseTune; }
+
+    //! Test whether this object still refers to the original voice.
+    bool isValid() const
+    {
+        return fluid_voice_get_id(m_voice) == m_id && fluid_voice_is_playing(m_voice);
+    }
+
+private:
+    fluid_voice_t* m_voice;
+    unsigned int m_id;
+    float m_coarseTune;
+};
 
 struct SF2PluginData
 {
 	int midiNote;
 	int lastPanning;
 	float lastVelocity;
-	fluid_voice_t * fluidVoice;
+
+    std::vector<FluidVoice> fluidVoices;
 	bool isNew;
 	f_cnt_t offset;
 	bool noteOffSent;
@@ -148,16 +181,17 @@ sf2Instrument::sf2Instrument( InstrumentTrack * _instrument_track ) :
 	m_chorusSpeed.setInitValue(settingVal);
 	fluid_settings_getnum_default(m_settings, "synth.chorus.depth", &settingVal);
 	m_chorusDepth.setInitValue(settingVal);
+    fluid_settings_getint(m_settings, "synth.effects-groups", &m_fxGroup);
 #endif
 
 	loadFile( ConfigManager::inst()->defaultSoundfont() );
 
 	updateSampleRate();
-	updateReverbOn();
-	updateReverb();
-	updateChorusOn();
-	updateChorus();
-	updateGain();
+    updateReverbOn();
+    updateReverb();
+    updateChorusOn();
+    updateChorus();
+    updateGain();
 
 	connect( &m_bankNum, SIGNAL( dataChanged() ), this, SLOT( updatePatch() ) );
 	connect( &m_patchNum, SIGNAL( dataChanged() ), this, SLOT( updatePatch() ) );
@@ -438,7 +472,7 @@ QString sf2Instrument::getCurrentPatchName()
 			fluid_preset_t preset;
 			fluid_preset_t *pCurPreset = &preset;
 #else
-			fluid_preset_t *pCurPreset;
+            fluid_preset_t *pCurPreset = NULL;
 #endif
 			while ((pCurPreset = fluid_sfont_iteration_next_wrapper(pSoundFont, pCurPreset)))
 			{
@@ -471,7 +505,8 @@ void sf2Instrument::updateGain()
 
 void sf2Instrument::updateReverbOn()
 {
-	fluid_synth_set_reverb_on( m_synth, m_reverbOn.value() ? 1 : 0 );
+    qDebug() << fluid_synth_reverb_on( m_synth, m_fxGroup,  m_reverbOn.value() ? 1 : 0);
+    qDebug() << fluid_synth_error(m_synth);
 }
 
 
@@ -479,9 +514,10 @@ void sf2Instrument::updateReverbOn()
 
 void sf2Instrument::updateReverb()
 {
-	fluid_synth_set_reverb( m_synth, m_reverbRoomSize.value(),
-			m_reverbDamping.value(), m_reverbWidth.value(),
-			m_reverbLevel.value() );
+    fluid_synth_set_reverb_group_damp(m_synth, m_fxGroup, m_reverbDamping.value());
+    fluid_synth_set_reverb_group_level(m_synth, m_fxGroup, m_reverbLevel.value());
+    fluid_synth_set_reverb_group_width(m_synth, m_fxGroup, m_reverbWidth.value());
+    fluid_synth_set_reverb_group_roomsize(m_synth, m_fxGroup, m_reverbRoomSize.value());
 }
 
 
@@ -489,7 +525,7 @@ void sf2Instrument::updateReverb()
 
 void  sf2Instrument::updateChorusOn()
 {
-	fluid_synth_set_chorus_on( m_synth, m_chorusOn.value() ? 1 : 0 );
+    fluid_synth_set_chorus_on( m_synth, m_chorusOn.value() ? 1 : 0 );
 }
 
 
@@ -563,20 +599,12 @@ void sf2Instrument::updateSampleRate()
 		}
 		m_synthMutex.unlock();
 	}
-	updateReverb();
-	updateChorus();
-	updateReverbOn();
-	updateChorusOn();
-	updateGain();
 
 	// Reset last MIDI pitch properties, which will be set to the correct values
 	// upon playing the next note
 	m_lastMidiPitch = -1;
 	m_lastMidiPitchRange = -1;
 }
-
-
-
 
 void sf2Instrument::playNote( NotePlayHandle * _n, sampleFrame * )
 {
@@ -585,26 +613,24 @@ void sf2Instrument::playNote( NotePlayHandle * _n, sampleFrame * )
 		return;
 	}
 
-	const f_cnt_t tfp = _n->totalFramesPlayed();
+    int masterPitch = instrumentTrack()->useMasterPitchModel()->value() ? Engine::getSong()->masterPitch() : 0;
+    int baseNote = instrumentTrack()->baseNoteModel()->value();
+    int midiNote = _n->midiKey() - baseNote + DefaultKey + masterPitch + KeysPerOctave;
 
-	if( tfp == 0 )
+    // out of range?
+    if( midiNote <= 0 || midiNote >= 128 )
+    {
+        return;
+    }
+
+    if( !_n->m_pluginData )
 	{
-		const float LOG440 = 2.643452676f;
-
-		int midiNote = (int)floor( 12.0 * ( log2( _n->unpitchedFrequency() ) - LOG440 ) - 4.0 );
-
-		// out of range?
-		if( midiNote <= 0 || midiNote >= 128 )
-		{
-			return;
-		}
 		const int baseVelocity = instrumentTrack()->midiPort()->baseVelocity();
 
 		SF2PluginData * pluginData = new SF2PluginData;
 		pluginData->midiNote = midiNote;
-		pluginData->lastPanning = 0;
+        pluginData->lastPanning = _n->getPanning();
 		pluginData->lastVelocity = _n->midiVelocity( baseVelocity );
-		pluginData->fluidVoice = NULL;
 		pluginData->isNew = true;
 		pluginData->offset = _n->offset();
 		pluginData->noteOffSent = false;
@@ -626,6 +652,16 @@ void sf2Instrument::playNote( NotePlayHandle * _n, sampleFrame * )
 		m_playingNotes.append( _n );
 		m_playingNotesMutex.unlock();
 	}
+
+    if (const auto data = static_cast<SF2PluginData*>(_n->m_pluginData)) {
+            const auto detuning = _n->currentDetuning();
+            for (const auto& voice : data->fluidVoices) {
+                if (voice.isValid()) {
+                    fluid_voice_gen_set(voice.get(), GEN_COARSETUNE, voice.coarseTune() + detuning);
+                    fluid_voice_update_param(voice.get(), GEN_COARSETUNE);
+                }
+            }
+        }
 }
 
 
@@ -636,31 +672,46 @@ void sf2Instrument::noteOn( SF2PluginData * n )
 	// get list of current voice IDs so we can easily spot the new
 	// voice after the fluid_synth_noteon() call
 	const int poly = fluid_synth_get_polyphony( m_synth );
-	fluid_voice_t * voices[poly];
-	unsigned int id[poly];
+    fluid_voice_t * voices[poly];
 	fluid_synth_get_voicelist( m_synth, voices, poly, -1 );
-	for( int i = 0; i < poly; ++i )
-	{
-		id[i] = 0;
-	}
-	for( int i = 0; i < poly && voices[i]; ++i )
-	{
-		id[i] = fluid_voice_get_id( voices[i] );
-	}
 
 	fluid_synth_noteon( m_synth, m_channel, n->midiNote, n->lastVelocity );
 
 	// get new voice and save it
 	fluid_synth_get_voicelist( m_synth, voices, poly, -1 );
-	for( int i = 0; i < poly && voices[i]; ++i )
-	{
-		const unsigned int newID = fluid_voice_get_id( voices[i] );
-		if( id[i] != newID || newID == 0 )
-		{
-			n->fluidVoice = voices[i];
-			break;
-		}
-	}
+    if (n->fluidVoices.empty())
+    {
+        for( int i = 0; i < poly && voices[i]; ++i )
+        {
+            const auto voice = voices[i];
+            if (fluid_voice_get_channel(voice) == m_channel && fluid_voice_get_key(voice) == n->midiNote && fluid_voice_is_on(voice))
+            {
+                n->fluidVoices.emplace_back(voice);
+            }
+        }
+    }
+
+    #if FLUIDSYNTH_VERSION_MAJOR >= 2
+
+    // Smallest balance value that results in full attenuation of one channel.
+    // Corresponds to internal FluidSynth macro `FLUID_CB_AMP_SIZE`.
+    constexpr static auto maxBalance = 1441.f;
+    // Convert panning from linear to exponential for FluidSynth
+    const auto panning = n->lastPanning;
+    const auto factor = 1.f - std::abs(panning) / static_cast<float>(PanningRight);
+    const auto balance = std::copysign(
+        factor <= 0 ? maxBalance : std::min(-200.f * std::log10(factor), maxBalance),
+        panning
+    );
+    // Set note panning on all the voices
+    for (const auto& voice : n->fluidVoices) {
+        if (voice.isValid()) {
+            fluid_voice_gen_set(voice.get(), GEN_CUSTOM_BALANCE, balance);
+            fluid_voice_update_param(voice.get(), GEN_CUSTOM_BALANCE);
+        }
+    }
+
+    #endif
 
 	m_synthMutex.unlock();
 
@@ -689,7 +740,8 @@ void sf2Instrument::noteOff( SF2PluginData * n )
 
 void sf2Instrument::play( sampleFrame * _working_buffer )
 {
-	const fpp_t frames = Engine::mixer()->framesPerPeriod();
+    const fpp_t frames = Engine::mixer()->framesPerPeriod();
+    f_cnt_t currentFrame = 0;
 
 	// set midi pitch for this period
 	const int currentMidiPitch = instrumentTrack()->midiPitch();
@@ -709,18 +761,17 @@ void sf2Instrument::play( sampleFrame * _working_buffer )
 		m_synthMutex.lock();
 		fluid_synth_pitch_wheel_sens( m_synth, m_channel, m_lastMidiPitchRange );
 		m_synthMutex.unlock();
-	}
+	} 
+
 	// if we have no new noteons/noteoffs, just render a period and call it a day
 	if( m_playingNotes.isEmpty() )
 	{
 		renderFrames( frames, _working_buffer );
-		instrumentTrack()->processAudioBuffer( _working_buffer, frames, NULL );
-		return;
+        goto end;
 	}
 
 	// processing loop
 	// go through noteplayhandles in processing order
-	f_cnt_t currentFrame = 0;
 
 	while( ! m_playingNotes.isEmpty() )
 	{
@@ -772,48 +823,53 @@ void sf2Instrument::play( sampleFrame * _working_buffer )
 	{
 		renderFrames( frames - currentFrame, _working_buffer + currentFrame );
 	}
-	instrumentTrack()->processAudioBuffer( _working_buffer, frames, NULL );
+
+    end:
+    instrumentTrack()->processAudioBuffer( _working_buffer, frames, NULL );
 }
 
 
 void sf2Instrument::renderFrames( f_cnt_t frames, sampleFrame * buf )
 {
 	m_synthMutex.lock();
-	if( m_internalSampleRate < Engine::mixer()->processingSampleRate() &&
-							m_srcState != NULL )
-	{
-		const fpp_t f = frames * m_internalSampleRate / Engine::mixer()->processingSampleRate();
-#ifdef __GNUC__
-		sampleFrame tmp[f];
-#else
-		sampleFrame * tmp = new sampleFrame[f];
-#endif
-		fluid_synth_write_float( m_synth, f, tmp, 0, 2, tmp, 1, 2 );
 
-		SRC_DATA src_data;
-		src_data.data_in = (float *)tmp;
-		src_data.data_out = (float *)buf;
-		src_data.input_frames = f;
-		src_data.output_frames = frames;
-		src_data.src_ratio = (double) frames / f;
-		src_data.end_of_input = 0;
-		int error = src_process( m_srcState, &src_data );
-#ifndef __GNUC__
-		delete[] tmp;
+    fluid_synth_get_gain(m_synth); // This flushes voice updates as a side effect
+
+    if( m_internalSampleRate < Engine::mixer()->processingSampleRate() &&
+                            m_srcState != NULL )
+    {
+        const fpp_t f = frames * m_internalSampleRate / Engine::mixer()->processingSampleRate();
+#ifdef __GNUC__
+        sampleFrame tmp[f];
+#else
+        sampleFrame * tmp = new sampleFrame[f];
 #endif
-		if( error )
-		{
-			qCritical( "sf2Instrument: error while resampling: %s", src_strerror( error ) );
-		}
-		if( src_data.output_frames_gen > frames )
-		{
-			qCritical( "sf2Instrument: not enough frames: %ld / %d", src_data.output_frames_gen, frames );
-		}
-	}
-	else
-	{
-		fluid_synth_write_float( m_synth, frames, buf, 0, 2, buf, 1, 2 );
-	}
+        fluid_synth_write_float( m_synth, f, tmp, 0, 2, tmp, 1, 2 );
+
+        SRC_DATA src_data;
+        src_data.data_in = (float *)tmp;
+        src_data.data_out = (float *)buf;
+        src_data.input_frames = f;
+        src_data.output_frames = frames;
+        src_data.src_ratio = (double) frames / f;
+        src_data.end_of_input = 0;
+        int error = src_process( m_srcState, &src_data );
+#ifndef __GNUC__
+        delete[] tmp;
+#endif
+        if( error )
+        {
+            qCritical( "sf2Instrument: error while resampling: %s", src_strerror( error ) );
+        }
+        if( src_data.output_frames_gen > frames )
+        {
+            qCritical( "sf2Instrument: not enough frames: %ld / %d", src_data.output_frames_gen, frames );
+        }
+    }
+    else
+    {
+        fluid_synth_write_float( m_synth, frames, buf, 0, 2, buf, 1, 2 );
+    }
 	m_synthMutex.unlock();
 }
 

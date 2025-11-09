@@ -208,6 +208,11 @@ public:
 		return &m_effectChannelModel;
 	}
 
+    BoolModel* useMasterPitchModel()
+    {
+        return &m_useMasterPitchModel;
+    }
+
 	void setPreviewMode( const bool );
 
 

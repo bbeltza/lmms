@@ -1,0 +1,1272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs_autogen\mocs_compilation_Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\AutomatableModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\AutomationPattern.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\BandLimitedWave.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\base64.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\BBTrackContainer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\BufferManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Clipboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\ComboBoxModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\ConfigManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Controller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\ControllerConnection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\DataFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\DrumSynth.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Effect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\EffectChain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\EnvelopeAndLfoParameters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\fft_helpers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\FxMixer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\ImportFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\InlineAutomation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Instrument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\InstrumentFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\InstrumentPlayHandle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\InstrumentSoundShaping.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\JournallingObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Ladspa2LMMS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\LadspaControl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\LadspaManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\LfoController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\LocklessAllocator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\MemoryHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\MemoryManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\MeterModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Mixer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\MixerProfiler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\MixerWorkerThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\MixHelpers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Model.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Note.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\NotePlayHandle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Oscillator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\PeakController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Piano.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\PlayHandle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Plugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\PluginFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\PresetPreviewPlayHandle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\ProjectJournal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\ProjectRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\ProjectVersion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\RemotePlugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\RenderManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\RingBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\SampleBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\SamplePlayHandle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\SampleRecordHandle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\SerializingObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Song.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\TempoSyncKnobModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\ToolPlugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Track.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\TrackContainer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\ValueBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\VstSyncController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioAlsa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioDevice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioFileDevice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioFileMP3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioFileOgg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioFileWave.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioJack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioOss.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioSndio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioPort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioPortAudio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioSoundIo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioPulseAudio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioSampleRecorder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioSdl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\midi\MidiAlsaRaw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\midi\MidiAlsaSeq.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\midi\MidiClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\midi\MidiController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\midi\MidiJack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\midi\MidiOss.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\midi\MidiSndio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\midi\MidiApple.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\midi\MidiPort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\midi\MidiTime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\midi\MidiWinMM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\AboutDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\ActionGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\AudioAlsaSetupWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\AudioDeviceSetupWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\AutomatableModelView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\AutomationPatternView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\ControllerConnectionDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\ControllerDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\EffectControlDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\EffectSelectDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\embed.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\ExportProjectDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\FileBrowser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\FxMixerView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\GuiApplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\InstrumentView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\LfoControllerDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\LmmsPalette.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\LmmsStyle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\MainApplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\MainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\MidiSetupWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\ModelView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\PeakControllerDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\PianoView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\PluginBrowser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\RowTableView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\SetupDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\StringPairDrag.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\SubWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\TimeLineWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\ToolPluginView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\TrackContainerView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\dialogs\FileDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\dialogs\VersionedSaveDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\editors\AutomationEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\editors\BBEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\editors\Editor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\editors\PianoRoll.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\editors\SongEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\AutomatableButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\AutomatableSlider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\CaptionMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\ComboBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\ControllerRackView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\ControllerView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\CPULoadWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\EffectRackView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\EffectView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\EnvelopeAndLfoView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\FadeButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\Fader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\FxLine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\Graph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\GroupBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\InstrumentFunctionViews.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\InstrumentMidiIOView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\InstrumentSoundShapingView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\LeftRightNav.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\Knob.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\LadspaControlView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\LcdSpinBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\LcdWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\LedCheckbox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\MeterDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\MidiPortMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\NStateButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\PixmapButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\ProjectNotes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\RenameDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\Rubberband.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\SendButtonIndicator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\SideBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\SideBarWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\TabBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\TabWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\TempoSyncKnob.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\TextFloat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\TimeDisplayWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\ToolButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\ToolTip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\TrackLabelButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\TrackRenameLineEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\VisualizationWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\tracks\AutomationTrack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\tracks\BBTrack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\tracks\InstrumentTrack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\tracks\Pattern.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\tracks\SampleTrack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs_autogen\mocs_compilation_Release.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs_autogen\mocs_compilation_MinSizeRel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AboutDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ActionGroup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AtomicInt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioAlsa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioAlsaSetupWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioDevice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioDeviceSetupWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioDummy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioFileDevice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioFileMP3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioFileOgg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioFileWave.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioJack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioOss.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioPort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioPortAudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioPulseAudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioSampleRecorder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioSdl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioSndio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioSoundIo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioWeakJack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AutomatableButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AutomatableModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AutomatableModelView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AutomatableSlider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AutomationEditor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AutomationPattern.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AutomationPatternView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AutomationTrack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\BBEditor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\BBTrack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\BBTrackContainer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\BandLimitedWave.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\BasicFilters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\BufferManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\CPULoadWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\CaptionMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Clipboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ComboBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ComboBoxModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ConfigManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Controller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ControllerConnection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ControllerConnectionDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ControllerDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ControllerRackView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ControllerView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\DataFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Delay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\DetuningHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\DrumSynth.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\DspEffectLibrary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\DummyEffect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\DummyInstrument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\DummyPlugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Editor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Effect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\EffectChain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\EffectControlDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\EffectControls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\EffectRackView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\EffectSelectDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\EffectView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\EnvelopeAndLfoParameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\EnvelopeAndLfoView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ExportFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ExportProjectDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\FadeButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Fader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\FileBrowser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\FileDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\FxLine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\FxMixer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\FxMixerView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Graph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\GroupBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\GuiApplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ImportFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\InlineAutomation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Instrument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\InstrumentFunctionViews.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\InstrumentFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\InstrumentMidiIOView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\InstrumentPlayHandle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\InstrumentSoundShaping.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\InstrumentSoundShapingView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\InstrumentTrack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\InstrumentView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\IoHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\JournallingObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Knob.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Ladspa2LMMS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LadspaBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LadspaControl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LadspaControlView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LadspaManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LcdSpinBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LcdWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LedCheckbox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LeftRightNav.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LfoController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LmmsPalette.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LmmsStyle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LocaleHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LocklessAllocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LocklessList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MainApplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MainWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MemoryHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MemoryManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MeterDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MeterModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MicroTimer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Midi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiAlsaRaw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiAlsaSeq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiApple.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiDummy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiEventProcessor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiJack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiOss.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiPort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiPortMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiSetupWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiSndio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiTime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiWinMM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MixHelpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Mixer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MixerProfiler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MixerWorkerThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Model.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ModelView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\NStateButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Note.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\NotePlayHandle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Oscillator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\OutputSettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Pattern.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\PeakController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Piano.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\PianoRoll.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\PianoView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Pitch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\PixmapButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\PlayHandle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Plugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\PluginBrowser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\PluginFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\PluginView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\PresetPreviewPlayHandle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ProjectJournal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ProjectNotes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ProjectRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ProjectVersion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\RemotePlugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\RenameDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\RenderManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\RingBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\RmsHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\RowTableView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Rubberband.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SampleBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SamplePlayHandle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SampleRecordHandle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SampleTrack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SendButtonIndicator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SerializingObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SetupDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SideBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SideBarWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Song.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SongEditor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\StringPairDrag.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SubWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SweepOscillator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TabBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TabButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TabWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TempoSyncKnob.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TempoSyncKnobModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TextFloat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ThreadableJob.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TimeDisplayWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TimeLineWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ToolButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ToolPlugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ToolPluginView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ToolTip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Track.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TrackContainer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TrackContainerView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TrackLabelButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TrackRenameLineEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ValueBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\VersionedSaveDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\VisualizationWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\VstSyncController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\VstSyncData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\aeffectx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\base64.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\custom_events.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\debug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\denormals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\embed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\endian_handling.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\fft_helpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\fifo_buffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\gui_templates.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\interpolation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ladspa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\lmms_basics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\lmms_constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\lmms_math.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\panning.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\panning_constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\shared_object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\templates.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\update_event.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\versioninfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\volume.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\ui_about_dialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\ui_export_project.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\ui_EffectSelectDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\embedded_resources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\dialogs\about_dialog.ui" />
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\dialogs\export_project.ui" />
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\Forms\EffectSelectDialog.ui" />
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\1325320aad400a0dbd0db9176d57e258\embedded_resources.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A83DCC89-D78F-33A4-9C4D-F24716CDD74A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{9F365683-3D39-36C3-A771-438F02FB97ED}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{781A3A1A-BC3A-3ACB-BD03-6FF33536870D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

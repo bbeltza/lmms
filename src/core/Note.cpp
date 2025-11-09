@@ -33,7 +33,7 @@
 
 Note::Note( const MidiTime & length, const MidiTime & pos,
 		int key, volume_t volume, panning_t panning,
-						DetuningHelper * detuning ) :
+                        std::shared_ptr<DetuningHelper> detuning ) :
 	m_selected( false ),
 	m_oldKey( qBound( 0, key, NumKeys ) ),
 	m_oldPos( pos ),
@@ -48,7 +48,7 @@ Note::Note( const MidiTime & length, const MidiTime & pos,
 {
 	if( detuning )
 	{
-		m_detuning = sharedObject::ref( detuning );
+        m_detuning = detuning;
 	}
 	else
 	{
@@ -71,12 +71,8 @@ Note::Note( const Note & note ) :
 	m_panning( note.m_panning ),
 	m_length( note.m_length ),
 	m_pos( note.m_pos ),
-	m_detuning( NULL )
+    m_detuning( note.m_detuning )
 {
-	if( note.m_detuning )
-	{
-		m_detuning = sharedObject::ref( note.m_detuning );
-	}
 }
 
 
@@ -84,10 +80,6 @@ Note::Note( const Note & note ) :
 
 Note::~Note()
 {
-	if( m_detuning )
-	{
-		sharedObject::unref( m_detuning );
-	}
 }
 
 
@@ -208,9 +200,9 @@ void Note::loadSettings( const QDomElement & _this )
 
 void Note::createDetuning()
 {
-	if( m_detuning == NULL )
+    if( m_detuning.get() == NULL )
 	{
-		m_detuning = new DetuningHelper;
+        m_detuning = std::shared_ptr<DetuningHelper>(new DetuningHelper);
 		(void) m_detuning->automationPattern();
 		m_detuning->setRange( -MaxDetuning, MaxDetuning, 0.5f );
 		m_detuning->automationPattern()->setProgressionType( AutomationPattern::LinearProgression );

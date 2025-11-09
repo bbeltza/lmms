@@ -1,0 +1,1029 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8E45BB1B-7BC5-36B2-951C-DFD139BD69AC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>lmmsobjs</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">lmmsobjs.dir\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">lmmsobjs.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">lmmsobjs</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">lmmsobjs.dir\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">lmmsobjs.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">lmmsobjs</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">lmmsobjs.dir\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">lmmsobjs.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">lmmsobjs</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">lmmsobjs.dir\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">lmmsobjs.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">lmmsobjs</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs_autogen\include_Debug;\opt\mingw32\include;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;C:\Users\amigo\source\repos\LMMS\lmms\cmake\src;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\include;C:\Users\amigo\source\repos\LMMS\lmms;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\msys64\mingw64\bin\..\include;C:\msys64\mingw64\bin\..\include\opus;C:\Users\amigo\source\repos\LMMS\lmms\src\3rdparty\rpmalloc\rpmalloc\rpmalloc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -fno-exceptions -Werror=unused-function -Wno-sign-compare -Wno-strict-overflow -march=pentium3 -mtune=generic -mpreferred-stack-boundary=5 -mfpmath=sse -Wno-attributes -std=c++0x</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;LMMS_DEBUG;'LIB_DIR=lib/';'PLUGIN_DIR=plugins/';CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;LMMS_DEBUG;'LIB_DIR=lib/';'PLUGIN_DIR=plugins/';CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs_autogen\include_Debug;\opt\mingw32\include;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;C:\Users\amigo\source\repos\LMMS\lmms\cmake\src;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\include;C:\Users\amigo\source\repos\LMMS\lmms;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\msys64\mingw64\bin\..\include;C:\msys64\mingw64\bin\..\include\opus;C:\Users\amigo\source\repos\LMMS\lmms\src\3rdparty\rpmalloc\rpmalloc\rpmalloc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs_autogen\include_Debug;\opt\mingw32\include;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;C:\Users\amigo\source\repos\LMMS\lmms\cmake\src;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\include;C:\Users\amigo\source\repos\LMMS\lmms;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\msys64\mingw64\bin\..\include;C:\msys64\mingw64\bin\..\include\opus;C:\Users\amigo\source\repos\LMMS\lmms\src\3rdparty\rpmalloc\rpmalloc\rpmalloc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Automatic MOC for target lmmsobjs</Message>
+      <Command>setlocal
+cd C:\Users\amigo\source\repos\LMMS\lmms\cmake\src
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/CMakeFiles/lmmsobjs_autogen.dir/AutogenInfo.json Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs_autogen\include_Release;\opt\mingw32\include;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;C:\Users\amigo\source\repos\LMMS\lmms\cmake\src;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\include;C:\Users\amigo\source\repos\LMMS\lmms;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\msys64\mingw64\bin\..\include;C:\msys64\mingw64\bin\..\include\opus;C:\Users\amigo\source\repos\LMMS\lmms\src\3rdparty\rpmalloc\rpmalloc\rpmalloc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -fno-exceptions -Werror=unused-function -Wno-sign-compare -Wno-strict-overflow -march=pentium3 -mtune=generic -mpreferred-stack-boundary=5 -mfpmath=sse -Wno-attributes -std=c++0x</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;'LIB_DIR=lib/';'PLUGIN_DIR=plugins/';CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;'LIB_DIR=lib/';'PLUGIN_DIR=plugins/';CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs_autogen\include_Release;\opt\mingw32\include;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;C:\Users\amigo\source\repos\LMMS\lmms\cmake\src;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\include;C:\Users\amigo\source\repos\LMMS\lmms;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\msys64\mingw64\bin\..\include;C:\msys64\mingw64\bin\..\include\opus;C:\Users\amigo\source\repos\LMMS\lmms\src\3rdparty\rpmalloc\rpmalloc\rpmalloc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs_autogen\include_Release;\opt\mingw32\include;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;C:\Users\amigo\source\repos\LMMS\lmms\cmake\src;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\include;C:\Users\amigo\source\repos\LMMS\lmms;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\msys64\mingw64\bin\..\include;C:\msys64\mingw64\bin\..\include\opus;C:\Users\amigo\source\repos\LMMS\lmms\src\3rdparty\rpmalloc\rpmalloc\rpmalloc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Automatic MOC for target lmmsobjs</Message>
+      <Command>setlocal
+cd C:\Users\amigo\source\repos\LMMS\lmms\cmake\src
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/CMakeFiles/lmmsobjs_autogen.dir/AutogenInfo.json Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs_autogen\include_MinSizeRel;\opt\mingw32\include;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;C:\Users\amigo\source\repos\LMMS\lmms\cmake\src;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\include;C:\Users\amigo\source\repos\LMMS\lmms;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\msys64\mingw64\bin\..\include;C:\msys64\mingw64\bin\..\include\opus;C:\Users\amigo\source\repos\LMMS\lmms\src\3rdparty\rpmalloc\rpmalloc\rpmalloc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -fno-exceptions -Werror=unused-function -Wno-sign-compare -Wno-strict-overflow -march=pentium3 -mtune=generic -mpreferred-stack-boundary=5 -mfpmath=sse -Wno-attributes -std=c++0x</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;'LIB_DIR=lib/';'PLUGIN_DIR=plugins/';CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;'LIB_DIR=lib/';'PLUGIN_DIR=plugins/';CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs_autogen\include_MinSizeRel;\opt\mingw32\include;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;C:\Users\amigo\source\repos\LMMS\lmms\cmake\src;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\include;C:\Users\amigo\source\repos\LMMS\lmms;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\msys64\mingw64\bin\..\include;C:\msys64\mingw64\bin\..\include\opus;C:\Users\amigo\source\repos\LMMS\lmms\src\3rdparty\rpmalloc\rpmalloc\rpmalloc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs_autogen\include_MinSizeRel;\opt\mingw32\include;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;C:\Users\amigo\source\repos\LMMS\lmms\cmake\src;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\include;C:\Users\amigo\source\repos\LMMS\lmms;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\msys64\mingw64\bin\..\include;C:\msys64\mingw64\bin\..\include\opus;C:\Users\amigo\source\repos\LMMS\lmms\src\3rdparty\rpmalloc\rpmalloc\rpmalloc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Automatic MOC for target lmmsobjs</Message>
+      <Command>setlocal
+cd C:\Users\amigo\source\repos\LMMS\lmms\cmake\src
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/CMakeFiles/lmmsobjs_autogen.dir/AutogenInfo.json MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs_autogen\include_RelWithDebInfo;\opt\mingw32\include;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;C:\Users\amigo\source\repos\LMMS\lmms\cmake\src;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\include;C:\Users\amigo\source\repos\LMMS\lmms;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\msys64\mingw64\bin\..\include;C:\msys64\mingw64\bin\..\include\opus;C:\Users\amigo\source\repos\LMMS\lmms\src\3rdparty\rpmalloc\rpmalloc\rpmalloc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -fno-exceptions -Werror=unused-function -Wno-sign-compare -Wno-strict-overflow -march=pentium3 -mtune=generic -mpreferred-stack-boundary=5 -mfpmath=sse -Wno-attributes -std=c++0x</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;'LIB_DIR=lib/';'PLUGIN_DIR=plugins/';CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;'LIB_DIR=lib/';'PLUGIN_DIR=plugins/';CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs_autogen\include_RelWithDebInfo;\opt\mingw32\include;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;C:\Users\amigo\source\repos\LMMS\lmms\cmake\src;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\include;C:\Users\amigo\source\repos\LMMS\lmms;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\msys64\mingw64\bin\..\include;C:\msys64\mingw64\bin\..\include\opus;C:\Users\amigo\source\repos\LMMS\lmms\src\3rdparty\rpmalloc\rpmalloc\rpmalloc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs_autogen\include_RelWithDebInfo;\opt\mingw32\include;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;C:\Users\amigo\source\repos\LMMS\lmms\cmake\src;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\cmake\include;C:\Users\amigo\source\repos\LMMS\lmms;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\msys64\mingw64\bin\..\include;C:\msys64\mingw64\bin\..\include\opus;C:\Users\amigo\source\repos\LMMS\lmms\src\3rdparty\rpmalloc\rpmalloc\rpmalloc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Automatic MOC for target lmmsobjs</Message>
+      <Command>setlocal
+cd C:\Users\amigo\source\repos\LMMS\lmms\cmake\src
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/CMakeFiles/lmmsobjs_autogen.dir/AutogenInfo.json RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\dialogs\about_dialog.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating ui_about_dialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\msys64\mingw64\bin\uic.exe -o C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/ui_about_dialog.h C:/Users/amigo/source/repos/LMMS/lmms/src/gui/dialogs/about_dialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\ui_about_dialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating ui_about_dialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\msys64\mingw64\bin\uic.exe -o C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/ui_about_dialog.h C:/Users/amigo/source/repos/LMMS/lmms/src/gui/dialogs/about_dialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\ui_about_dialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating ui_about_dialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\msys64\mingw64\bin\uic.exe -o C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/ui_about_dialog.h C:/Users/amigo/source/repos/LMMS/lmms/src/gui/dialogs/about_dialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\ui_about_dialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating ui_about_dialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\msys64\mingw64\bin\uic.exe -o C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/ui_about_dialog.h C:/Users/amigo/source/repos/LMMS/lmms/src/gui/dialogs/about_dialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\ui_about_dialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\dialogs\export_project.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating ui_export_project.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\msys64\mingw64\bin\uic.exe -o C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/ui_export_project.h C:/Users/amigo/source/repos/LMMS/lmms/src/gui/dialogs/export_project.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\ui_export_project.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating ui_export_project.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\msys64\mingw64\bin\uic.exe -o C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/ui_export_project.h C:/Users/amigo/source/repos/LMMS/lmms/src/gui/dialogs/export_project.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\ui_export_project.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating ui_export_project.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\msys64\mingw64\bin\uic.exe -o C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/ui_export_project.h C:/Users/amigo/source/repos/LMMS/lmms/src/gui/dialogs/export_project.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\ui_export_project.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating ui_export_project.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\msys64\mingw64\bin\uic.exe -o C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/ui_export_project.h C:/Users/amigo/source/repos/LMMS/lmms/src/gui/dialogs/export_project.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\ui_export_project.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\Forms\EffectSelectDialog.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating ui_EffectSelectDialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\msys64\mingw64\bin\uic.exe -o C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/ui_EffectSelectDialog.h C:/Users/amigo/source/repos/LMMS/lmms/src/gui/Forms/EffectSelectDialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\ui_EffectSelectDialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating ui_EffectSelectDialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\msys64\mingw64\bin\uic.exe -o C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/ui_EffectSelectDialog.h C:/Users/amigo/source/repos/LMMS/lmms/src/gui/Forms/EffectSelectDialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\ui_EffectSelectDialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating ui_EffectSelectDialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\msys64\mingw64\bin\uic.exe -o C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/ui_EffectSelectDialog.h C:/Users/amigo/source/repos/LMMS/lmms/src/gui/Forms/EffectSelectDialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\ui_EffectSelectDialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating ui_EffectSelectDialog.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\msys64\mingw64\bin\uic.exe -o C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/ui_EffectSelectDialog.h C:/Users/amigo/source/repos/LMMS/lmms/src/gui/Forms/EffectSelectDialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\ui_EffectSelectDialog.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\CMakeFiles\1325320aad400a0dbd0db9176d57e258\embedded_resources.h.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating embedded_resources.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+..\bin2res C:/Users/amigo/source/repos/LMMS/lmms/doc/AUTHORS C:/Users/amigo/source/repos/LMMS/lmms/LICENSE.txt C:/Users/amigo/source/repos/LMMS/lmms/cmake/CONTRIBUTORS &gt; C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/embedded_resources.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\embedded_resources.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating embedded_resources.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+..\bin2res C:/Users/amigo/source/repos/LMMS/lmms/doc/AUTHORS C:/Users/amigo/source/repos/LMMS/lmms/LICENSE.txt C:/Users/amigo/source/repos/LMMS/lmms/cmake/CONTRIBUTORS &gt; C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/embedded_resources.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\embedded_resources.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating embedded_resources.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+..\bin2res C:/Users/amigo/source/repos/LMMS/lmms/doc/AUTHORS C:/Users/amigo/source/repos/LMMS/lmms/LICENSE.txt C:/Users/amigo/source/repos/LMMS/lmms/cmake/CONTRIBUTORS &gt; C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/embedded_resources.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\embedded_resources.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating embedded_resources.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+..\bin2res C:/Users/amigo/source/repos/LMMS/lmms/doc/AUTHORS C:/Users/amigo/source/repos/LMMS/lmms/LICENSE.txt C:/Users/amigo/source/repos/LMMS/lmms/cmake/CONTRIBUTORS &gt; C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/embedded_resources.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\embedded_resources.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\src\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/amigo/source/repos/LMMS/lmms/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/amigo/source/repos/LMMS/lmms -BC:/Users/amigo/source/repos/LMMS/lmms/cmake --check-stamp-file C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\amigo\source\repos\LMMS\lmms\src\lmmsconfig.h.in;C:\Users\amigo\source\repos\LMMS\lmms\src\lmmsversion.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/amigo/source/repos/LMMS/lmms/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/amigo/source/repos/LMMS/lmms -BC:/Users/amigo/source/repos/LMMS/lmms/cmake --check-stamp-file C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\amigo\source\repos\LMMS\lmms\src\lmmsconfig.h.in;C:\Users\amigo\source\repos\LMMS\lmms\src\lmmsversion.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/amigo/source/repos/LMMS/lmms/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/amigo/source/repos/LMMS/lmms -BC:/Users/amigo/source/repos/LMMS/lmms/cmake --check-stamp-file C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\amigo\source\repos\LMMS\lmms\src\lmmsconfig.h.in;C:\Users\amigo\source\repos\LMMS\lmms\src\lmmsversion.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/amigo/source/repos/LMMS/lmms/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/amigo/source/repos/LMMS/lmms -BC:/Users/amigo/source/repos/LMMS/lmms/cmake --check-stamp-file C:/Users/amigo/source/repos/LMMS/lmms/cmake/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\amigo\source\repos\LMMS\lmms\src\lmmsconfig.h.in;C:\Users\amigo\source\repos\LMMS\lmms\src\lmmsversion.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs_autogen\mocs_compilation_Debug.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\AutomatableModel.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\AutomationPattern.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\BandLimitedWave.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\base64.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\BBTrackContainer.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\BufferManager.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Clipboard.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\ComboBoxModel.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\ConfigManager.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Controller.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\ControllerConnection.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\DataFile.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\DrumSynth.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Effect.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\EffectChain.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Engine.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\EnvelopeAndLfoParameters.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\fft_helpers.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\FxMixer.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\ImportFilter.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\InlineAutomation.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Instrument.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\InstrumentFunctions.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\InstrumentPlayHandle.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\InstrumentSoundShaping.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\JournallingObject.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Ladspa2LMMS.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\LadspaControl.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\LadspaManager.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\LfoController.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\LocklessAllocator.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\MemoryHelper.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\MemoryManager.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\MeterModel.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Mixer.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\MixerProfiler.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\MixerWorkerThread.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\MixHelpers.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Model.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Note.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\NotePlayHandle.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Oscillator.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\PeakController.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Piano.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\PlayHandle.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Plugin.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\PluginFactory.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\PresetPreviewPlayHandle.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\ProjectJournal.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\ProjectRenderer.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\ProjectVersion.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\RemotePlugin.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\RenderManager.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\RingBuffer.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\SampleBuffer.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\SamplePlayHandle.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\SampleRecordHandle.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\SerializingObject.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Song.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\TempoSyncKnobModel.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\ToolPlugin.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\Track.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\TrackContainer.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\ValueBuffer.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\VstSyncController.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioAlsa.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioDevice.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioFileDevice.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioFileMP3.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioFileOgg.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioFileWave.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioJack.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioOss.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioSndio.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioPort.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioPortAudio.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioSoundIo.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioPulseAudio.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioSampleRecorder.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\audio\AudioSdl.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\midi\MidiAlsaRaw.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\midi\MidiAlsaSeq.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\midi\MidiClient.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\midi\MidiController.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\midi\MidiJack.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\midi\MidiOss.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\midi\MidiSndio.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\midi\MidiApple.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\midi\MidiPort.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\midi\MidiTime.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\core\midi\MidiWinMM.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\AboutDialog.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\ActionGroup.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\AudioAlsaSetupWidget.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\AudioDeviceSetupWidget.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\AutomatableModelView.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\AutomationPatternView.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\ControllerConnectionDialog.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\ControllerDialog.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\EffectControlDialog.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\EffectSelectDialog.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\embed.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\ExportProjectDialog.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\FileBrowser.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\FxMixerView.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\GuiApplication.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\InstrumentView.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\LfoControllerDialog.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\LmmsPalette.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\LmmsStyle.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\MainApplication.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\MainWindow.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\MidiSetupWidget.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\ModelView.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\PeakControllerDialog.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\PianoView.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\PluginBrowser.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\RowTableView.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\SetupDialog.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\StringPairDrag.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\SubWindow.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\TimeLineWidget.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\ToolPluginView.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\TrackContainerView.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\dialogs\FileDialog.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\dialogs\VersionedSaveDialog.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\editors\AutomationEditor.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\editors\BBEditor.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\editors\Editor.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\editors\PianoRoll.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\editors\SongEditor.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\AutomatableButton.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\AutomatableSlider.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\CaptionMenu.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\ComboBox.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\ControllerRackView.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\ControllerView.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\CPULoadWidget.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\EffectRackView.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\EffectView.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\EnvelopeAndLfoView.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\FadeButton.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\Fader.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\FxLine.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\Graph.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\GroupBox.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\InstrumentFunctionViews.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\InstrumentMidiIOView.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\InstrumentSoundShapingView.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\LeftRightNav.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\Knob.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\LadspaControlView.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\LcdSpinBox.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\LcdWidget.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\LedCheckbox.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\MeterDialog.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\MidiPortMenu.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\NStateButton.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\PixmapButton.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\ProjectNotes.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\RenameDialog.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\Rubberband.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\SendButtonIndicator.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\SideBar.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\SideBarWidget.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\TabBar.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\TabWidget.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\TempoSyncKnob.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\TextFloat.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\TimeDisplayWidget.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\ToolButton.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\ToolTip.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\TrackLabelButton.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\TrackRenameLineEdit.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\gui\widgets\VisualizationWidget.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\tracks\AutomationTrack.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\tracks\BBTrack.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\tracks\InstrumentTrack.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\tracks\Pattern.cpp" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\src\tracks\SampleTrack.cpp" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AboutDialog.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ActionGroup.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AtomicInt.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioAlsa.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioAlsaSetupWidget.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioDevice.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioDeviceSetupWidget.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioDummy.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioFileDevice.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioFileMP3.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioFileOgg.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioFileWave.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioJack.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioOss.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioPort.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioPortAudio.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioPulseAudio.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioSampleRecorder.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioSdl.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioSndio.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioSoundIo.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AudioWeakJack.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AutomatableButton.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AutomatableModel.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AutomatableModelView.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AutomatableSlider.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AutomationEditor.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AutomationPattern.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AutomationPatternView.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\AutomationTrack.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\BBEditor.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\BBTrack.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\BBTrackContainer.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\BandLimitedWave.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\BasicFilters.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\BufferManager.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\CPULoadWidget.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\CaptionMenu.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Clipboard.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ComboBox.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ComboBoxModel.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ConfigManager.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Controller.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ControllerConnection.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ControllerConnectionDialog.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ControllerDialog.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ControllerRackView.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ControllerView.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\DataFile.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Delay.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\DetuningHelper.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\DrumSynth.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\DspEffectLibrary.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\DummyEffect.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\DummyInstrument.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\DummyPlugin.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Editor.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Effect.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\EffectChain.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\EffectControlDialog.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\EffectControls.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\EffectRackView.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\EffectSelectDialog.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\EffectView.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Engine.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\EnvelopeAndLfoParameters.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\EnvelopeAndLfoView.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ExportFilter.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ExportProjectDialog.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\FadeButton.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Fader.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\FileBrowser.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\FileDialog.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\FxLine.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\FxMixer.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\FxMixerView.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Graph.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\GroupBox.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\GuiApplication.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ImportFilter.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\InlineAutomation.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Instrument.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\InstrumentFunctionViews.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\InstrumentFunctions.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\InstrumentMidiIOView.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\InstrumentPlayHandle.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\InstrumentSoundShaping.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\InstrumentSoundShapingView.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\InstrumentTrack.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\InstrumentView.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\IoHelper.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\JournallingObject.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Knob.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Ladspa2LMMS.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LadspaBase.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LadspaControl.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LadspaControlView.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LadspaManager.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LcdSpinBox.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LcdWidget.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LedCheckbox.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LeftRightNav.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LfoController.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LmmsPalette.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LmmsStyle.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LocaleHelper.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LocklessAllocator.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\LocklessList.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MainApplication.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MainWindow.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MemoryHelper.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MemoryManager.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MeterDialog.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MeterModel.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MicroTimer.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Midi.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiAlsaRaw.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiAlsaSeq.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiApple.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiClient.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiController.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiDummy.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiEvent.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiEventProcessor.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiJack.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiOss.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiPort.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiPortMenu.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiSetupWidget.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiSndio.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiTime.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MidiWinMM.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MixHelpers.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Mixer.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MixerProfiler.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\MixerWorkerThread.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Model.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ModelView.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\NStateButton.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Note.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\NotePlayHandle.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Oscillator.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\OutputSettings.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Pattern.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\PeakController.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Piano.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\PianoRoll.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\PianoView.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Pitch.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\PixmapButton.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\PlayHandle.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Plugin.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\PluginBrowser.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\PluginFactory.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\PluginView.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\PresetPreviewPlayHandle.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ProjectJournal.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ProjectNotes.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ProjectRenderer.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ProjectVersion.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\RemotePlugin.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\RenameDialog.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\RenderManager.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\RingBuffer.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\RmsHelper.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\RowTableView.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Rubberband.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SampleBuffer.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SamplePlayHandle.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SampleRecordHandle.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SampleTrack.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SendButtonIndicator.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SerializingObject.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SetupDialog.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SideBar.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SideBarWidget.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Song.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SongEditor.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\StringPairDrag.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SubWindow.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\SweepOscillator.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TabBar.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TabButton.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TabWidget.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TempoSyncKnob.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TempoSyncKnobModel.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TextFloat.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ThreadableJob.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TimeDisplayWidget.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TimeLineWidget.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ToolButton.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ToolPlugin.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ToolPluginView.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ToolTip.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\Track.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TrackContainer.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TrackContainerView.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TrackLabelButton.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\TrackRenameLineEdit.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ValueBuffer.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\VersionedSaveDialog.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\VisualizationWidget.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\VstSyncController.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\VstSyncData.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\aeffectx.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\base64.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\custom_events.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\debug.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\denormals.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\embed.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\endian_handling.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\export.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\fft_helpers.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\fifo_buffer.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\gui_templates.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\interpolation.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\ladspa.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\lmms_basics.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\lmms_constants.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\lmms_math.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\panning.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\panning_constants.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\shared_object.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\templates.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\update_event.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\versioninfo.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\include\volume.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\ui_about_dialog.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\ui_export_project.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\ui_EffectSelectDialog.h" />
+    <ClInclude Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\embedded_resources.h" />
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs_autogen\mocs_compilation_Release.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs_autogen\mocs_compilation_MinSizeRel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\src\lmmsobjs_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\ZERO_CHECK.vcxproj">
+      <Project>{146FE8A8-C58C-3C14-9BBD-DF14A34D466D}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\bin2res.vcxproj">
+      <Project>{8D41F7C5-5ABD-3963-8173-EEE05DD9E410}</Project>
+      <Name>bin2res</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

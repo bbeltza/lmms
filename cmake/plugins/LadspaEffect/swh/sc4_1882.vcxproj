@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3F397798-B6FF-3861-9968-FEB231B1AD06}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>sc4_1882</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\ladspa\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sc4_1882.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sc4_1882</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\ladspa\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sc4_1882.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sc4_1882</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\ladspa\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">sc4_1882.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">sc4_1882</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\ladspa\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">sc4_1882.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">sc4_1882</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\LadspaEffect;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;C:\Users\amigo\source\repos\LMMS\lmms\plugins\LadspaEffect\swh;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/msys64/mingw64/include" /external:I "C:/msys64/mingw64/include/QtCore" /external:I "C:/msys64/mingw64/share/qt5/mkspecs/win32-g++" /external:I "C:/msys64/mingw64/include/QtGui" /external:I "C:/msys64/mingw64/include/QtWidgets" /external:I "C:/msys64/mingw64/include/QtXml" -Werror=unused-function -Wno-sign-compare -Wno-strict-overflow -march=pentium3 -mtune=generic -mpreferred-stack-boundary=5 -mfpmath=sse -O3 -fomit-frame-pointer -funroll-loops -ffast-math -fno-strict-aliasing</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;LMMS_DEBUG;PLUGIN_NAME=ladspaeffect;FFTW3;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_XML_LIB;CMAKE_INTDIR="Debug";sc4_1882_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;LMMS_DEBUG;PLUGIN_NAME=ladspaeffect;FFTW3;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_XML_LIB;CMAKE_INTDIR=\"Debug\";sc4_1882_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\LadspaEffect;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;C:\Users\amigo\source\repos\LMMS\lmms\plugins\LadspaEffect\swh;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\LadspaEffect;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;C:\Users\amigo\source\repos\LMMS\lmms\plugins\LadspaEffect\swh;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+\opt\mingw32\bin\i686-w64-mingw32-strip "C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/ladspa/Debug/sc4_1882.dll"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>-lfftw3f;Debug\rms.lib;Debug\db.lib;C:\msys64\mingw64\lib\libQt5Widgets.dll.a;C:\msys64\mingw64\lib\libQt5Gui.dll.a;C:\msys64\mingw64\lib\libQt5Xml.dll.a;C:\msys64\mingw64\lib\libQt5Core.dll.a;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>/opt/mingw32/lib;/opt/mingw32/lib/$(Configuration);/opt/mingw32/bin;/opt/mingw32/bin/$(Configuration);C:/Users/amigo/source/repos/LMMS/lmms/cmake;C:/Users/amigo/source/repos/LMMS/lmms/cmake/$(Configuration);C:/Users/amigo/source/repos/LMMS/lmms;C:/Users/amigo/source/repos/LMMS/lmms/$(Configuration);C:/msys64/mingw64/bin/../lib;C:/msys64/mingw64/bin/../lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/LadspaEffect/swh/Debug/sc4_1882.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/ladspa/Debug/sc4_1882.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\LadspaEffect;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;C:\Users\amigo\source\repos\LMMS\lmms\plugins\LadspaEffect\swh;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/msys64/mingw64/include" /external:I "C:/msys64/mingw64/include/QtCore" /external:I "C:/msys64/mingw64/share/qt5/mkspecs/win32-g++" /external:I "C:/msys64/mingw64/include/QtGui" /external:I "C:/msys64/mingw64/include/QtWidgets" /external:I "C:/msys64/mingw64/include/QtXml" -Werror=unused-function -Wno-sign-compare -Wno-strict-overflow -march=pentium3 -mtune=generic -mpreferred-stack-boundary=5 -mfpmath=sse -O3 -fomit-frame-pointer -funroll-loops -ffast-math -fno-strict-aliasing</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLUGIN_NAME=ladspaeffect;FFTW3;QT_CORE_LIB;QT_NO_DEBUG;QT_GUI_LIB;QT_WIDGETS_LIB;QT_XML_LIB;CMAKE_INTDIR="Release";sc4_1882_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLUGIN_NAME=ladspaeffect;FFTW3;QT_CORE_LIB;QT_NO_DEBUG;QT_GUI_LIB;QT_WIDGETS_LIB;QT_XML_LIB;CMAKE_INTDIR=\"Release\";sc4_1882_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\LadspaEffect;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;C:\Users\amigo\source\repos\LMMS\lmms\plugins\LadspaEffect\swh;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\LadspaEffect;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;C:\Users\amigo\source\repos\LMMS\lmms\plugins\LadspaEffect\swh;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+\opt\mingw32\bin\i686-w64-mingw32-strip "C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/ladspa/Release/sc4_1882.dll"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>-lfftw3f;Release\rms.lib;Release\db.lib;C:\msys64\mingw64\lib\libQt5Widgets.dll.a;C:\msys64\mingw64\lib\libQt5Gui.dll.a;C:\msys64\mingw64\lib\libQt5Xml.dll.a;C:\msys64\mingw64\lib\libQt5Core.dll.a;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>/opt/mingw32/lib;/opt/mingw32/lib/$(Configuration);/opt/mingw32/bin;/opt/mingw32/bin/$(Configuration);C:/Users/amigo/source/repos/LMMS/lmms/cmake;C:/Users/amigo/source/repos/LMMS/lmms/cmake/$(Configuration);C:/Users/amigo/source/repos/LMMS/lmms;C:/Users/amigo/source/repos/LMMS/lmms/$(Configuration);C:/msys64/mingw64/bin/../lib;C:/msys64/mingw64/bin/../lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/LadspaEffect/swh/Release/sc4_1882.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/ladspa/Release/sc4_1882.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\LadspaEffect;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;C:\Users\amigo\source\repos\LMMS\lmms\plugins\LadspaEffect\swh;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/msys64/mingw64/include" /external:I "C:/msys64/mingw64/include/QtCore" /external:I "C:/msys64/mingw64/share/qt5/mkspecs/win32-g++" /external:I "C:/msys64/mingw64/include/QtGui" /external:I "C:/msys64/mingw64/include/QtWidgets" /external:I "C:/msys64/mingw64/include/QtXml" -Werror=unused-function -Wno-sign-compare -Wno-strict-overflow -march=pentium3 -mtune=generic -mpreferred-stack-boundary=5 -mfpmath=sse -O3 -fomit-frame-pointer -funroll-loops -ffast-math -fno-strict-aliasing</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLUGIN_NAME=ladspaeffect;FFTW3;QT_CORE_LIB;QT_NO_DEBUG;QT_GUI_LIB;QT_WIDGETS_LIB;QT_XML_LIB;CMAKE_INTDIR="MinSizeRel";sc4_1882_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLUGIN_NAME=ladspaeffect;FFTW3;QT_CORE_LIB;QT_NO_DEBUG;QT_GUI_LIB;QT_WIDGETS_LIB;QT_XML_LIB;CMAKE_INTDIR=\"MinSizeRel\";sc4_1882_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\LadspaEffect;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;C:\Users\amigo\source\repos\LMMS\lmms\plugins\LadspaEffect\swh;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\LadspaEffect;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;C:\Users\amigo\source\repos\LMMS\lmms\plugins\LadspaEffect\swh;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+\opt\mingw32\bin\i686-w64-mingw32-strip "C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/ladspa/MinSizeRel/sc4_1882.dll"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>-lfftw3f;MinSizeRel\rms.lib;MinSizeRel\db.lib;C:\msys64\mingw64\lib\libQt5Widgets.dll.a;C:\msys64\mingw64\lib\libQt5Gui.dll.a;C:\msys64\mingw64\lib\libQt5Xml.dll.a;C:\msys64\mingw64\lib\libQt5Core.dll.a;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>/opt/mingw32/lib;/opt/mingw32/lib/$(Configuration);/opt/mingw32/bin;/opt/mingw32/bin/$(Configuration);C:/Users/amigo/source/repos/LMMS/lmms/cmake;C:/Users/amigo/source/repos/LMMS/lmms/cmake/$(Configuration);C:/Users/amigo/source/repos/LMMS/lmms;C:/Users/amigo/source/repos/LMMS/lmms/$(Configuration);C:/msys64/mingw64/bin/../lib;C:/msys64/mingw64/bin/../lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/LadspaEffect/swh/MinSizeRel/sc4_1882.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/ladspa/MinSizeRel/sc4_1882.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\LadspaEffect;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;C:\Users\amigo\source\repos\LMMS\lmms\plugins\LadspaEffect\swh;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/msys64/mingw64/include" /external:I "C:/msys64/mingw64/include/QtCore" /external:I "C:/msys64/mingw64/share/qt5/mkspecs/win32-g++" /external:I "C:/msys64/mingw64/include/QtGui" /external:I "C:/msys64/mingw64/include/QtWidgets" /external:I "C:/msys64/mingw64/include/QtXml" -Werror=unused-function -Wno-sign-compare -Wno-strict-overflow -march=pentium3 -mtune=generic -mpreferred-stack-boundary=5 -mfpmath=sse -O3 -fomit-frame-pointer -funroll-loops -ffast-math -fno-strict-aliasing</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLUGIN_NAME=ladspaeffect;FFTW3;QT_CORE_LIB;QT_NO_DEBUG;QT_GUI_LIB;QT_WIDGETS_LIB;QT_XML_LIB;CMAKE_INTDIR="RelWithDebInfo";sc4_1882_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLUGIN_NAME=ladspaeffect;FFTW3;QT_CORE_LIB;QT_NO_DEBUG;QT_GUI_LIB;QT_WIDGETS_LIB;QT_XML_LIB;CMAKE_INTDIR=\"RelWithDebInfo\";sc4_1882_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\LadspaEffect;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;C:\Users\amigo\source\repos\LMMS\lmms\plugins\LadspaEffect\swh;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>\opt\mingw32\include;C:\msys64\mingw64\bin\..\include;C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\LadspaEffect;C:\Users\amigo\source\repos\LMMS\lmms\cmake;C:\Users\amigo\source\repos\LMMS\lmms\include;C:\Users\amigo\source\repos\LMMS\lmms\src\gui;C:\Users\amigo\source\repos\LMMS\lmms\plugins\LadspaEffect\swh;C:\msys64\mingw64\include;C:\msys64\mingw64\include\QtCore;C:\msys64\mingw64\share\qt5\mkspecs\win32-g++;C:\msys64\mingw64\include\QtGui;C:\msys64\mingw64\include\QtWidgets;C:\msys64\mingw64\include\QtXml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+\opt\mingw32\bin\i686-w64-mingw32-strip "C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/ladspa/RelWithDebInfo/sc4_1882.dll"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>-lfftw3f;RelWithDebInfo\rms.lib;RelWithDebInfo\db.lib;C:\msys64\mingw64\lib\libQt5Widgets.dll.a;C:\msys64\mingw64\lib\libQt5Gui.dll.a;C:\msys64\mingw64\lib\libQt5Xml.dll.a;C:\msys64\mingw64\lib\libQt5Core.dll.a;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>/opt/mingw32/lib;/opt/mingw32/lib/$(Configuration);/opt/mingw32/bin;/opt/mingw32/bin/$(Configuration);C:/Users/amigo/source/repos/LMMS/lmms/cmake;C:/Users/amigo/source/repos/LMMS/lmms/cmake/$(Configuration);C:/Users/amigo/source/repos/LMMS/lmms;C:/Users/amigo/source/repos/LMMS/lmms/$(Configuration);C:/msys64/mingw64/bin/../lib;C:/msys64/mingw64/bin/../lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/LadspaEffect/swh/RelWithDebInfo/sc4_1882.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/ladspa/RelWithDebInfo/sc4_1882.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\LadspaEffect\swh\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/amigo/source/repos/LMMS/lmms/plugins/LadspaEffect/swh/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/amigo/source/repos/LMMS/lmms -BC:/Users/amigo/source/repos/LMMS/lmms/cmake --check-stamp-file C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/LadspaEffect/swh/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\LadspaEffect\swh\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/amigo/source/repos/LMMS/lmms/plugins/LadspaEffect/swh/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/amigo/source/repos/LMMS/lmms -BC:/Users/amigo/source/repos/LMMS/lmms/cmake --check-stamp-file C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/LadspaEffect/swh/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\LadspaEffect\swh\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/amigo/source/repos/LMMS/lmms/plugins/LadspaEffect/swh/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/amigo/source/repos/LMMS/lmms -BC:/Users/amigo/source/repos/LMMS/lmms/cmake --check-stamp-file C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/LadspaEffect/swh/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\LadspaEffect\swh\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/amigo/source/repos/LMMS/lmms/plugins/LadspaEffect/swh/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/amigo/source/repos/LMMS/lmms -BC:/Users/amigo/source/repos/LMMS/lmms/cmake --check-stamp-file C:/Users/amigo/source/repos/LMMS/lmms/cmake/plugins/LadspaEffect/swh/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\LadspaEffect\swh\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\amigo\source\repos\LMMS\lmms\plugins\LadspaEffect\swh\sc4_1882.c" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\ZERO_CHECK.vcxproj">
+      <Project>{146FE8A8-C58C-3C14-9BBD-DF14A34D466D}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\LadspaEffect\swh\db.vcxproj">
+      <Project>{8CA5FE15-8DF3-30F9-B88E-6DEF36C8D7A9}</Project>
+      <Name>db</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\amigo\source\repos\LMMS\lmms\cmake\plugins\LadspaEffect\swh\rms.vcxproj">
+      <Project>{ABD4D026-1368-3221-A93E-019342F71665}</Project>
+      <Name>rms</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

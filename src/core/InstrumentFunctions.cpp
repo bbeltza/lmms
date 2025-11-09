@@ -258,7 +258,7 @@ void InstrumentFunctionNoteStacking::processNote( NotePlayHandle * _n )
 					break;
 				}
 				// create copy of base-note
-				Note note_copy( _n->length(), 0, sub_note_key, _n->getVolume(), _n->getPanning(), _n->detuning() );
+                Note note_copy( _n->length(), 0, sub_note_key, _n->getVolume(), _n->getPanning(), _n->detuning() );
 
 				// create sub-note-play-handle, only note is
 				// different
