@@ -40,7 +40,8 @@ IF(WIN32)
 					"-I\"${CMAKE_SOURCE_DIR}\""
 					"-o\"${CMAKE_BINARY_DIR}/lmmsrc.obj\""
 					"-i\"${CMAKE_BINARY_DIR}/lmms.rc\""
-				DEPENDS "${CMAKE_BINARY_DIR}/lmms.rc")
+                                DEPENDS "${CMAKE_BINARY_DIR}/lmms.rc"
+                                COMMAND "echo" "HEYYYY??¿?¿?")
 ENDIF()
 
 SET(lmms_EMBEDDED_RESOURCES "${CMAKE_SOURCE_DIR}/doc/AUTHORS" "${CMAKE_SOURCE_DIR}/LICENSE.txt" "${CONTRIBUTORS}")
@@ -50,7 +51,7 @@ ADD_CUSTOM_COMMAND(OUTPUT "${LMMS_ER_H}" COMMAND "${BIN2RES}" ARGS ${lmms_EMBEDD
 # Paths relative to lmms executable
 FILE(RELATIVE_PATH LIB_DIR_RELATIVE "/${BIN_DIR}" "/${LIB_DIR}")
 FILE(RELATIVE_PATH PLUGIN_DIR_RELATIVE "/${BIN_DIR}" "/${PLUGIN_DIR}")
-ADD_DEFINITIONS(-D'LIB_DIR="${LIB_DIR_RELATIVE}/"' -D'PLUGIN_DIR="${PLUGIN_DIR_RELATIVE}/"' ${PULSEAUDIO_DEFINITIONS} ${PORTAUDIO_DEFINITIONS})
+ADD_DEFINITIONS(-DLIB_DIR="${LIB_DIR_RELATIVE}/" -DPLUGIN_DIR="${PLUGIN_DIR_RELATIVE}/" ${PULSEAUDIO_DEFINITIONS} ${PORTAUDIO_DEFINITIONS})
 INCLUDE_DIRECTORIES(
 	${JACK_INCLUDE_DIRS}
 	${SAMPLERATE_INCLUDE_DIRS}
@@ -93,11 +94,11 @@ IF(CMAKE_VERSION VERSION_GREATER "2.8.7")
 		${LMMS_INCLUDES}
 		${LMMS_UI_OUT}
 		${LMMS_ER_H}
+                "${WINRC}"
 	)
 	ADD_EXECUTABLE(lmms
 		core/main.cpp
 		$<TARGET_OBJECTS:lmmsobjs>
-		"${WINRC}"
 	)
 
     SET(iwyu include-what-you-use -Xiwyu --mapping_file=/usr/share/include-what-you-use/qt5_4.imp)
@@ -109,7 +110,7 @@ ELSE()
 		${LMMS_INCLUDES}
 		${LMMS_UI_OUT}
 		${LMMS_ER_H}
-		"${WINRC}"
+                "${WINRC}"
 	)
 ENDIF()
 
