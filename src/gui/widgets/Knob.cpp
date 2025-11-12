@@ -780,12 +780,20 @@ void Knob::enterValue()
 	}
 	else
 	{
+        QString label("Please enter a new value between "
+                      "%1 and %2:");
+        if (model()->minValue() == qRound(model()->minValue()))
+            label = label.arg(static_cast<int>(model()->minValue()));
+        else
+            label = label.arg(model()->minValue());
+
+        if (model()->maxValue() == qRound(model()->maxValue()))
+            label = label.arg(static_cast<int>(model()->maxValue()));
+        else
+            label = label.arg(model()->maxValue());
+
 		new_val = QInputDialog::getDouble(
-				this, windowTitle(),
-				tr( "Please enter a new value between "
-						"%1 and %2:" ).
-						arg( model()->minValue() ).
-						arg( model()->maxValue() ),
+                this, windowTitle(), label,
 					model()->getRoundedValue(),
 					model()->minValue(),
 					model()->maxValue(), model()->getDigitCount(), &ok );
@@ -811,7 +819,7 @@ void Knob::friendlyUpdate()
 }
 
 
-
+#include <QDebug>
 
 QString Knob::displayValue() const
 {
@@ -822,8 +830,14 @@ QString Knob::displayValue() const
 				arg( 20.0 * log10( model()->getRoundedValue() / volumeRatio() ),
 								3, 'f', 2 );
 	}
-	return m_description.trimmed() + QString( " %1" ).
-					arg( model()->getRoundedValue() ) + m_unit;
+    QString str(" %1");
+    float val = model()->getRoundedValue();
+
+    if (val == qRound(model()->value()))
+        str = str.arg(static_cast<int>(val)); // Avoid confusing scientific notations on large integral numbers
+    else
+        str = str.arg(val);
+    return m_description.trimmed() + str + m_unit;
 }
 
 

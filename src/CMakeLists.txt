@@ -40,8 +40,7 @@ IF(WIN32)
 					"-I\"${CMAKE_SOURCE_DIR}\""
 					"-o\"${CMAKE_BINARY_DIR}/lmmsrc.obj\""
 					"-i\"${CMAKE_BINARY_DIR}/lmms.rc\""
-                                DEPENDS "${CMAKE_BINARY_DIR}/lmms.rc"
-                                COMMAND "echo" "HEYYYY??¿?¿?")
+                                DEPENDS "${CMAKE_BINARY_DIR}/lmms.rc")
 ENDIF()
 
 SET(lmms_EMBEDDED_RESOURCES "${CMAKE_SOURCE_DIR}/doc/AUTHORS" "${CMAKE_SOURCE_DIR}/LICENSE.txt" "${CONTRIBUTORS}")

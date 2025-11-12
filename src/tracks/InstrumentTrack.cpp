@@ -156,7 +156,7 @@ InstrumentTrack::~InstrumentTrack()
 }
 
 
-
+#include <QDebug>
 
 void InstrumentTrack::processAudioBuffer( sampleFrame* buf, const fpp_t frames, NotePlayHandle* n )
 {

@@ -712,7 +712,7 @@ bool SampleBuffer::play( sampleFrame * _ab, handleState * _state,
 		src_data.output_frames = _frames;
 		src_data.src_ratio = 1.0 / freq_factor;
 		src_data.end_of_input = 0;
-		int error = src_process( _state->m_resamplingData,
+        int error = src_process( _state->m_resamplingData,
 								&src_data );
 		if( error )
 		{

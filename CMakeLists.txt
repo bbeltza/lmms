@@ -1,4 +1,4 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8.7)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.10)
 
 PROJECT(lmms)
 
@@ -190,7 +190,7 @@ ELSE()
 ENDIF()
 
 # check for libsndfile
-find_package(SndFile REQUIRED)
+FIND_PACKAGE(SndFile REQUIRED)
 IF(SndFile_VERSION VERSION_LESS "1.0.11")
 	MESSAGE(FATAL_ERROR "LMMS requires libsndfile1 and libsndfile1-dev >= 1.0.11 - please install, remove CMakeCache.txt and try again!")
 ENDIF(SndFile_VERSION VERSION_LESS "1.0.11")
