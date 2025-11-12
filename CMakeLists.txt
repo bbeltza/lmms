@@ -8,9 +8,7 @@ IF(COMMAND CMAKE_POLICY)
 	CMAKE_POLICY(SET CMP0005 NEW)
 	CMAKE_POLICY(SET CMP0003 NEW)
 	IF (CMAKE_MAJOR_VERSION GREATER 2)
-		CMAKE_POLICY(SET CMP0026 OLD)
 		CMAKE_POLICY(SET CMP0045 NEW)
-		CMAKE_POLICY(SET CMP0050 OLD)
 	ENDIF()
 ENDIF(COMMAND CMAKE_POLICY)
 
@@ -67,7 +65,7 @@ OPTION(WANT_TAP		"Include Tom's Audio Processing LADSPA plugins" ON)
 OPTION(WANT_VST		"Include VST support" ON)
 OPTION(WANT_VST_NOWINE	"Include partial VST support (without wine)" OFF)
 OPTION(WANT_WINMM	"Include WinMM MIDI support" OFF)
-OPTION(WANT_QT5		"Build with Qt5" OFF)
+OPTION(WANT_QT5		"Build with Qt5" ON)
 OPTION(BUNDLE_QT_TRANSLATIONS	"Install Qt translation files for LMMS" OFF)
 
 
@@ -105,17 +103,6 @@ ELSE(LMMS_BUILD_WIN32)
 	SET(STATUS_WINMM "<not supported on this platform>")
 ENDIF(LMMS_BUILD_WIN32)
 
-
-# TODO: Fix linking issues with msys debug builds
-IF(LMMS_BUILD_MSYS AND CMAKE_BUILD_TYPE STREQUAL "Debug")
-	SET(WANT_GIG OFF)
-	SET(WANT_STK OFF)
-	SET(WANT_SWH OFF)
-	SET(STATUS_GIG "not built as requested")
-	SET(STATUS_STK "not built as requested")
-ENDIF()
-
-
 CHECK_INCLUDE_FILES(stdint.h LMMS_HAVE_STDINT_H)
 CHECK_INCLUDE_FILES(stdlib.h LMMS_HAVE_STDLIB_H)
 CHECK_INCLUDE_FILES(pthread.h LMMS_HAVE_PTHREAD_H)
@@ -134,6 +121,9 @@ CHECK_INCLUDE_FILES(ctype.h LMMS_HAVE_CTYPE_H)
 CHECK_INCLUDE_FILES(string.h LMMS_HAVE_STRING_H)
 CHECK_INCLUDE_FILES(process.h LMMS_HAVE_PROCESS_H)
 CHECK_INCLUDE_FILES(locale.h LMMS_HAVE_LOCALE_H)
+
+include(CheckLibraryExists)
+check_library_exists(rt shm_open "" LMMS_HAVE_LIBRT)
 
 LIST(APPEND CMAKE_PREFIX_PATH "${CMAKE_INSTALL_PREFIX}")
 
@@ -200,10 +190,10 @@ ELSE()
 ENDIF()
 
 # check for libsndfile
-PKG_CHECK_MODULES(SNDFILE REQUIRED sndfile>=1.0.11)
-IF(NOT SNDFILE_FOUND)
+find_package(SndFile REQUIRED)
+IF(SndFile_VERSION VERSION_LESS "1.0.11")
 	MESSAGE(FATAL_ERROR "LMMS requires libsndfile1 and libsndfile1-dev >= 1.0.11 - please install, remove CMakeCache.txt and try again!")
-ENDIF(NOT SNDFILE_FOUND)
+ENDIF(SndFile_VERSION VERSION_LESS "1.0.11")
 
 IF(WANT_CALF)
 	SET(LMMS_HAVE_CALF TRUE)
@@ -550,6 +540,20 @@ IF(WIN32)
 ELSE(WIN32)
 	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -DPIC")
 ENDIF(WIN32)
+
+#
+# checking for ${STRIP} (It is highly used by the build system but it can not exist too)
+#
+
+IF (NOT STRIP)
+	set(STRIP "strip")
+ENDIF(NOT STRIP)
+
+# for ${WINDRES} too
+
+if (WIN32 AND NOT WINDRES)
+	set(WINDRES "windres")
+endif()
 
 # use ccache
 OPTION(USE_CCACHE "Use ccache for compilation" OFF)

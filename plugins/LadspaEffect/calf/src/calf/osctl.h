@@ -464,13 +464,13 @@ struct osc_net_bad_address: public std::exception
 
 struct osc_net_exception: public std::exception
 {
-    int net_errno;
+    int net_err;
     std::string command, error_msg;
-    osc_net_exception(const char *cmd, int _errno = errno)
+    osc_net_exception(const char *cmd, int _err = errno)
     {
         command = cmd;
-        net_errno = _errno;
-        error_msg = "OSC error in "+command+": "+strerror(_errno);
+        net_err = _err;
+        error_msg = "OSC error in "+command+": "+strerror(_err);
     }
     virtual const char *what() const throw() { return error_msg.c_str(); }
     virtual ~osc_net_exception() throw () {}
@@ -479,13 +479,13 @@ struct osc_net_exception: public std::exception
 struct osc_net_dns_exception: public std::exception
 {
 #if 0
-    int net_errno;
+    int net_err;
     std::string command, error_msg;
-    osc_net_dns_exception(const char *cmd, int _errno = h_errno)
+    osc_net_dns_exception(const char *cmd, int _err = h_err)
     {
         command = cmd;
-        net_errno = _errno;
-        error_msg = "OSC error in "+command+": "+hstrerror(_errno);
+        net_err = _err;
+        error_msg = "OSC error in "+command+": "+hstrerror(_err);
     }
     virtual const char *what() const throw() { return error_msg.c_str(); }
     virtual ~osc_net_dns_exception() throw () {}

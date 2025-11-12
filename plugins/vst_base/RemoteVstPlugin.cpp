@@ -1665,11 +1665,7 @@ intptr_t RemoteVstPlugin::hostCallback( AEffect * _effect, int32_t _opcode,
 			}
 			__plugin->m_in->m_lastFlags = _timeInfo.flags;
 
-#ifdef LMMS_BUILD_WIN64
-			return (long long) &_timeInfo;
-#else
-			return (long) &_timeInfo;
-#endif
+		return (intptr_t) &_timeInfo;
 
 		case audioMasterProcessEvents:
 			SHOW_CALLBACK( "amc: audioMasterProcessEvents\n" );

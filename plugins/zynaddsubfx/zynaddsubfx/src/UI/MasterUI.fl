@@ -69,6 +69,7 @@ extern NSM_Client *nsm;
 decl {\#if OS_WINDOWS
 \#include <Windows.h>
 \#endif} {public
+}
 
 decl {\#include "../globals.h"} {public
 } 

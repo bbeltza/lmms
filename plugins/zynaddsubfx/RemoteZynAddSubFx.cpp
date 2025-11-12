@@ -167,9 +167,6 @@ private:
 
 } ;
 
-
-
-
 void RemoteZynAddSubFx::guiLoop()
 {
 	int exitProgram = 0;
