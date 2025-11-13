@@ -264,10 +264,11 @@ void SampleBuffer::update( bool _keep_settings )
 			m_loopStartFrame = m_startFrame = 0;
 			m_loopEndFrame = m_endFrame = 1;
 		}
+        /* Not necessary, it would mess up the frame count
 		else // otherwise normalize sample rate
 		{
-			normalizeSampleRate( samplerate, _keep_settings );
-		}
+            normalizeSampleRate( samplerate, _keep_settings );
+        } */
 	}
 	else
 	{

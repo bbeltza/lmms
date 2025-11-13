@@ -331,9 +331,24 @@ void audioFileProcessor::setAudioFile( const QString & _audio_file,
 		// then set it to new one
 		instrumentTrack()->setName( QFileInfo( _audio_file).fileName() );
 	}
+
 	// else we don't touch the track-name, because the user named it self
 
+    float start_ratio = m_startPointModel.value() / m_sampleBuffer.frames();
+    float loop_ratio = m_loopPointModel.value() / m_sampleBuffer.frames();
+    float end_ratio = m_endPointModel.value() / m_sampleBuffer.frames();
+
 	m_sampleBuffer.setAudioFile( _audio_file );
+
+    qDebug("%d", m_sampleBuffer.endFrame());
+
+    m_startPointModel.setRange(0.0f, static_cast<float>(m_sampleBuffer.frames()));
+    m_loopPointModel.setRange(0.0f, static_cast<float>(m_sampleBuffer.frames()));
+    m_endPointModel.setRange(0.0f, static_cast<float>(m_sampleBuffer.frames()));
+
+    m_startPointModel.setValue(start_ratio * m_sampleBuffer.frames());
+    m_loopPointModel.setValue(loop_ratio * m_sampleBuffer.frames());
+    m_endPointModel.setValue(end_ratio * m_sampleBuffer.frames());
 
 	loopPointChanged();
 }
@@ -736,7 +751,7 @@ void AudioFileProcessorView::openAudioFile( void )
 	{
 		castModel<audioFileProcessor>()->setAudioFile( af );
 		Engine::getSong()->setModified();
-		m_waveView->updateSampleRange();
+        sampleUpdated();
 	}
 }
 
@@ -769,12 +784,6 @@ void AudioFileProcessorWaveView::updateSampleRange()
 		const f_cnt_t marging = ( m_sampleBuffer.endFrame() - m_sampleBuffer.startFrame() ) * 0.1;
 		m_from = qMax( 0, m_sampleBuffer.startFrame() - marging );
 		m_to = qMin( m_sampleBuffer.endFrame() + marging, m_sampleBuffer.frames() );
-
-        if (!m_startKnob) return;
-        m_startKnob->model()->setRange(0.0f, static_cast<float>(m_sampleBuffer.frames()));
-        m_loopKnob->model()->setRange(0.0f, static_cast<float>(m_sampleBuffer.frames()));
-        m_endKnob->model()->setRange(0.0f, static_cast<float>(m_sampleBuffer.frames()));
-        m_endKnob->model()->setValue(m_endKnob->model()->maxValue());
 	}
 }
 
@@ -1180,7 +1189,7 @@ void AudioFileProcessorWaveView::slideSamplePointByPx( knobType _point, int _px 
 
 void AudioFileProcessorWaveView::slideSamplePointByFrames( knobType _point, f_cnt_t _frames, bool _slide_to )
 {
-	knob * a_knob = m_startKnob;
+    knob * a_knob;
 	switch( _point )
 	{
 		case end:
@@ -1190,7 +1199,10 @@ void AudioFileProcessorWaveView::slideSamplePointByFrames( knobType _point, f_cn
 			a_knob = m_loopKnob;
 			break;
 		case start:
+            a_knob = m_startKnob;
 			break;
+        default:
+            return;
 	}
 	if( a_knob == NULL )
 	{
@@ -1198,7 +1210,7 @@ void AudioFileProcessorWaveView::slideSamplePointByFrames( knobType _point, f_cn
 	}
 	else
 	{
-		const double v = static_cast<double>( _frames ) / m_sampleBuffer.frames();
+        const float v = static_cast<float>( _frames );
 		if( _slide_to )
 		{
 			a_knob->slideTo( v );
@@ -1219,7 +1231,7 @@ void AudioFileProcessorWaveView::slideSampleByFrames( f_cnt_t _frames )
 	{
 		return;
 	}
-	const double v = static_cast<double>( _frames ) / m_sampleBuffer.frames();
+    const float v = static_cast<float>( _frames );
 	if( m_startKnob ) {
 		m_startKnob->slideBy( v, false );
 	}
@@ -1270,7 +1282,7 @@ void AudioFileProcessorWaveView::updateCursor( QMouseEvent * _me )
 
 
 
-void AudioFileProcessorWaveView::knob::slideTo( double _v, bool _check_bound )
+void AudioFileProcessorWaveView::knob::slideTo( float _v, bool _check_bound )
 {
 	if( _check_bound && ! checkBound( _v ) )
 	{

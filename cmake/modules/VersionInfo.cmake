@@ -1,4 +1,8 @@
 FIND_PACKAGE(Git)
+
+# Ignore automatic versioning
+SET(FORCE_VERSION "internal")
+
 IF(GIT_FOUND AND NOT FORCE_VERSION)
 	# Look for git tag information (e.g. Tagged: "v1.0.0", Non-tagged: "v1.0.0-123-a1b2c3d")
 	EXECUTE_PROCESS(

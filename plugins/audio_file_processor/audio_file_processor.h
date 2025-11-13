@@ -197,12 +197,12 @@ public:
 			m_relatedKnob = _knob;
 		}
 
-		void slideBy( double _v, bool _check_bound = true )
+        void slideBy( float _v, bool _check_bound = true )
 		{
 			slideTo( model()->value() + _v, _check_bound );
 		}
 
-		void slideTo( double _v, bool _check_bound = true );
+        void slideTo( float _v, bool _check_bound = true );
 
 
 	protected:
