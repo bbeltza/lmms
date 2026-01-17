@@ -165,12 +165,6 @@ FOREACH(LIB ${LMMS_REQUIRED_LIBS})
     ENDIF()
 ENDFOREACH()
 
-
-# Required libs for debug msys builds
-IF(LMMS_BUILD_MSYS AND CMAKE_BUILD_TYPE STREQUAL "Debug")
-	TARGET_LINK_LIBRARIES(lmms QtCore4 QtGui4 QtXml4)
-ENDIF()
-
 # Install
 IF(LMMS_BUILD_WIN32)
 	SET_TARGET_PROPERTIES(lmms PROPERTIES
@@ -191,7 +185,7 @@ IF(LMMS_BUILD_WIN32)
 					"${MINGW_PREFIX}/bin/Qt5Xml.dll"
 				DESTINATION .)
 		INSTALL(FILES
-					"${MINGW_PREFIX}/lib/qt5/plugins/platforms/qwindows.dll"
+					"${MINGW_PREFIX}/share/qt5/plugins/platforms/qwindows.dll"
 				DESTINATION ./platforms)
 	ELSE()
 		INSTALL(FILES
@@ -208,32 +202,50 @@ IF(LMMS_BUILD_WIN32)
 					"${MINGW_PREFIX}/bin/libvorbis-0.dll"
 					"${MINGW_PREFIX}/bin/libvorbisenc-2.dll"
 					"${MINGW_PREFIX}/bin/libvorbisfile-3.dll"
-					"${MINGW_PREFIX}/bin/libjpeg-9.dll"
+					"${MINGW_PREFIX}/bin/libjpeg-8.dll"
 					"${MINGW_PREFIX}/bin/libogg-0.dll"
 					"${MINGW_PREFIX}/bin/libmp3lame-0.dll"
 					"${MINGW_PREFIX}/bin/libfftw3f-3.dll"
-					"${MINGW_PREFIX}/bin/libFLAC-8.dll"
+					"${MINGW_PREFIX}/bin/libFLAC.dll"
 					"${MINGW_PREFIX}/bin/libpng16-16.dll"
 					"${MINGW_PREFIX}/bin/SDL.dll"
 					"${MINGW_PREFIX}/bin/libglib-2.0-0.dll"
 					"${MINGW_PREFIX}/bin/libgthread-2.0-0.dll"
 					"${MINGW_PREFIX}/bin/zlib1.dll"
-					"${MINGW_PREFIX}/${CMAKE_SYSTEM_PROCESSOR}-w64-mingw32/bin/libwinpthread-1.dll"
+					"${MINGW_PREFIX}/bin/libwinpthread-1.dll"
+					"${MINGW_PREFIX}/bin/libharfbuzz-0.dll"
+					"${MINGW_PREFIX}/bin/libmd4c.dll"
+					"${MINGW_PREFIX}/bin/libmpg123-0.dll"
+					"${MINGW_PREFIX}/bin/libopus-0.dll"
+					"${MINGW_PREFIX}/bin/libicudt77.dll"
+					"${MINGW_PREFIX}/bin/libfreetype-6.dll"
+					"${MINGW_PREFIX}/bin/libgraphite2.dll"
 				DESTINATION .)
 	IF(LMMS_BUILD_MSYS)
 		INSTALL(FILES
 					"${MINGW_PREFIX}/bin/libgcc_s_seh-1.dll"
 					"${MINGW_PREFIX}/bin/libstdc++-6.dll"
+					"${MINGW_PREFIX}/bin/libdouble-conversion.dll"
+					"${MINGW_PREFIX}/bin/libicuuc77.dll"
+					"${MINGW_PREFIX}/bin/libicuin77.dll"
+					"${MINGW_PREFIX}/bin/libpcre2-16-0.dll"
+					"${MINGW_PREFIX}/bin/libpcre2-8-0.dll"
+					"${MINGW_PREFIX}/bin/libzstd.dll"
+					"${MINGW_PREFIX}/bin/libintl-8.dll"
+					"${MINGW_PREFIX}/bin/libbz2-1.dll"
+					"${MINGW_PREFIX}/bin/libbrotlidec.dll"
+					"${MINGW_PREFIX}/bin/libbrotlicommon.dll"
+					"${MINGW_PREFIX}/bin/libiconv-2.dll"
 				DESTINATION .)
 	ENDIF()
 	IF(FLTK_FOUND)
 		INSTALL(FILES
-					"${MINGW_PREFIX}/bin/libfltk.dll"
+					"${MINGW_PREFIX}/bin/libfltk-1.4.dll"
 				DESTINATION .)
 	ENDIF()
 	IF(FLUIDSYNTH_FOUND)
 		INSTALL(FILES
-					"${MINGW_PREFIX}/bin/libfluidsynth.dll"
+					"${MINGW_PREFIX}/bin/libfluidsynth-3.dll"
 				DESTINATION .)
 	ENDIF()
 	IF(GIG_FOUND)
@@ -243,7 +255,7 @@ IF(LMMS_BUILD_WIN32)
 	ENDIF()
 	IF(PORTAUDIO_FOUND)
 		INSTALL(FILES
-					"${MINGW_PREFIX}/bin/libportaudio-2.dll"
+					"${MINGW_PREFIX}/bin/libportaudio.dll"
 				DESTINATION .)
 	ENDIF()
 	IF(SOUNDIO_FOUND)

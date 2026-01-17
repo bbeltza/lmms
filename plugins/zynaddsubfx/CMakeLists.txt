@@ -42,7 +42,7 @@ IF(NOT FLTK_FOUND)
 ENDIF()
 
 IF(MINGW_PREFIX)
-	SET(FLTK_FLUID_EXECUTABLE "${MINGW_PREFIX}/bin/fluid")
+	SET(FLTK_FLUID_EXECUTABLE "${MINGW_PREFIX}/bin/fluid.exe")
 ENDIF()
 
 IF(NOT EXISTS ${FLTK_FLUID_EXECUTABLE})
@@ -121,11 +121,6 @@ ELSE()
 	ADD_LIBRARY(ZynAddSubFxCore SHARED LocalZynAddSubFx.cpp ${zynaddsubfx_core_SRCS})
 ENDIF()
 TARGET_LINK_LIBRARIES(ZynAddSubFxCore zynaddsubfx_nio ${FFTW3F_LIBRARIES} ${QT_LIBRARIES} -lz -lpthread)
-
-# required libs for debug msys builds
-IF(LMMS_BUILD_MSYS AND CMAKE_BUILD_TYPE STREQUAL "Debug")
-	TARGET_LINK_LIBRARIES(ZynAddSubFxCore QtCore4 QtGui4 QtXml4)
-ENDIF()
 
 IF(QT5)
 TARGET_LINK_LIBRARIES(ZynAddSubFxCore Qt5::Widgets Qt5::Xml)

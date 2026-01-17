@@ -12,5 +12,5 @@ SET(CMAKE_SYSTEM_PROCESSOR32        i686)
 SET(WIN64                           TRUE)
 
 
-INCLUDE(MinGWCrossCompile)
+INCLUDE(${CMAKE_SOURCE_DIR}/cmake/modules/MinGWCrossCompile.cmake)
 

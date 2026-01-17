@@ -46,7 +46,7 @@ int main( int argc, char * * argv )
 {
 	if( argc < 2 )
 	{
-		std::cerr << "Usage:"  << std::endl << "\t" << argv[0] <<
+		std::cerr << "Usage:"  << "\n\t" << argv[0] <<
 							" files" << std::endl;
 		return( 1 );
 	}

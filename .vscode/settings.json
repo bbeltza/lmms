@@ -1,0 +1,8 @@
+{
+    "cmake.configureArgs": [
+        "-DMINGW_PREFIX=C:/msys64/mingw64",
+        "-DLMMS_BUILD_MSYS=1",
+        "-DWIN64=1",
+        "-DLMMS_BUILD_WIN32=1"
+    ]
+}
