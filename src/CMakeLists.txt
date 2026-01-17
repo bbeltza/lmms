@@ -250,7 +250,7 @@ IF(LMMS_BUILD_WIN32)
 					"${MINGW_PREFIX}/bin/libgomp-1.dll"
 					"${MINGW_PREFIX}/bin/libreadline8.dll"
 					"${MINGW_PREFIX}/bin/libtermcap-0.dll"
-					"${MINGW_PREFIX}/bin/SDL3.dll" # TODO: Use SDL3 generally instead of SDL 1.2 to avoid deploying 2 SDL dlls
+					"${MINGW_PREFIX}/bin/SDL3.dll"
 				DESTINATION .)
 	ENDIF()
 	IF(GIG_FOUND)
