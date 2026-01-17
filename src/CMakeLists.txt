@@ -246,6 +246,11 @@ IF(LMMS_BUILD_WIN32)
 	IF(FLUIDSYNTH_FOUND)
 		INSTALL(FILES
 					"${MINGW_PREFIX}/bin/libfluidsynth-3.dll"
+					"${MINGW_PREFIX}/bin/libgmodule-2.0-0.dll"
+					"${MINGW_PREFIX}/bin/libgomp-1.dll"
+					"${MINGW_PREFIX}/bin/libreadline8.dll"
+					"${MINGW_PREFIX}/bin/libtermcap-0.dll"
+					"${MINGW_PREFIX}/bin/SDL3.dll" # TODO: Use SDL3 generally instead of SDL 1.2 to avoid deploying 2 SDL dlls
 				DESTINATION .)
 	ENDIF()
 	IF(GIG_FOUND)
