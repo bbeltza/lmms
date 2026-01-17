@@ -29,8 +29,8 @@
 
 #ifdef LMMS_HAVE_SDL
 
-#include <SDL/SDL.h>
-#include <SDL/SDL_audio.h>
+#include <SDL3/SDL.h>
+#include <SDL3/SDL_audio.h>
 
 #include "AudioDevice.h"
 #include "AudioDeviceSetupWidget.h"
@@ -70,10 +70,11 @@ private:
 	virtual void stopProcessing();
 	virtual void applyQualitySettings();
 
-	static void sdlAudioCallback( void * _udata, Uint8 * _buf, int _len );
-	void sdlAudioCallback( Uint8 * _buf, int _len );
+	static void sdlAudioCallback(void *userdata, SDL_AudioStream *stream, int additional_amount, int total_amount);
+	void sdlAudioCallback(SDL_AudioStream *stream, int additional_amount, int total_amount);
 
-	SDL_AudioSpec m_audioHandle;
+	SDL_AudioSpec m_audioSpec;
+	SDL_AudioStream* m_audioStream;
 
 	surroundSampleFrame * m_outBuf;
 	Uint8 * m_convertedBuf;

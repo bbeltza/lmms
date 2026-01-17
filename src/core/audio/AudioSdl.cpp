@@ -48,31 +48,28 @@ AudioSdl::AudioSdl( bool & _success_ful, Mixer*  _mixer ) :
 	m_convertedBuf = new Uint8[m_convertedBufSize];
 
 
-	if( SDL_Init( SDL_INIT_AUDIO | SDL_INIT_NOPARACHUTE ) < 0 )
+	if( !SDL_Init( SDL_INIT_AUDIO ) )
 	{
 		qCritical( "Couldn't initialize SDL: %s\n", SDL_GetError() );
 		return;
 	}
 
-	m_audioHandle.freq = sampleRate();
-	m_audioHandle.format = AUDIO_S16SYS;	// we want it in byte-order
+	m_audioSpec.freq = sampleRate();
+	m_audioSpec.format = SDL_AUDIO_S16;	// we want it in byte-order
 						// of system, so we don't have
 						// to convert the buffers
-	m_audioHandle.channels = channels();
-	m_audioHandle.samples = qMax( 1024, mixer()->framesPerPeriod()*2 );
+	m_audioSpec.channels = channels();
 
-	m_audioHandle.callback = sdlAudioCallback;
-	m_audioHandle.userdata = this;
+	//m_audioHandle.samples = qMax( 1024, mixer()->framesPerPeriod()*2 );
 
-  	SDL_AudioSpec actual; 
-
-	// open the audio device, forcing the desired format
-	if( SDL_OpenAudio( &m_audioHandle, &actual ) < 0 )
+	// open the audio device
+	m_audioStream = SDL_OpenAudioDeviceStream(SDL_AUDIO_DEVICE_DEFAULT_PLAYBACK, &m_audioSpec, sdlAudioCallback, this);
+	if( !m_audioStream )
 	{
 		qCritical( "Couldn't open SDL-audio: %s\n", SDL_GetError() );
 		return;
 	}
-	m_convertEndian = ( m_audioHandle.format != actual.format );
+	//m_convertEndian = ( m_audioHandle.format != actual.format );
 
 	_success_ful = true;
 }
@@ -84,7 +81,7 @@ AudioSdl::~AudioSdl()
 {
 	stopProcessing();
 
-	SDL_CloseAudio();
+	SDL_DestroyAudioStream(m_audioStream);
 	SDL_Quit();
 	delete[] m_convertedBuf;
 	delete[] m_outBuf;
@@ -97,7 +94,7 @@ void AudioSdl::startProcessing()
 {
 	m_stopped = false;
 
-	SDL_PauseAudio( 0 );
+	SDL_ResumeAudioStreamDevice(m_audioStream);
 }
 
 
@@ -105,12 +102,13 @@ void AudioSdl::startProcessing()
 
 void AudioSdl::stopProcessing()
 {
-	if( SDL_GetAudioStatus() == SDL_AUDIO_PLAYING )
+	
+	if( !SDL_AudioStreamDevicePaused(m_audioStream) )
 	{
-		SDL_LockAudio();
+		SDL_LockAudioStream(m_audioStream);
 		m_stopped = true;
-		SDL_PauseAudio( 1 );
-		SDL_UnlockAudio();
+		SDL_PauseAudioStreamDevice(m_audioStream);
+		SDL_UnlockAudioStream(m_audioStream);
 	}
 }
 
@@ -121,16 +119,15 @@ void AudioSdl::applyQualitySettings()
 {
 	if( 0 )//hqAudio() )
 	{
-		SDL_CloseAudio();
+		SDL_DestroyAudioStream(m_audioStream);
 
 		setSampleRate( Engine::mixer()->processingSampleRate() );
 
-		m_audioHandle.freq = sampleRate();
-
-		SDL_AudioSpec actual; 
+		m_audioSpec.freq = sampleRate();
 
 		// open the audio device, forcing the desired format
-		if( SDL_OpenAudio( &m_audioHandle, &actual ) < 0 )
+		m_audioStream = SDL_OpenAudioDeviceStream( SDL_AUDIO_DEVICE_DEFAULT_PLAYBACK, &m_audioSpec, sdlAudioCallback, this );
+		if( !m_audioStream )
 		{
 			qCritical( "Couldn't open SDL-audio: %s\n", SDL_GetError() );
 		}
@@ -142,25 +139,26 @@ void AudioSdl::applyQualitySettings()
 
 
 
-void AudioSdl::sdlAudioCallback( void * _udata, Uint8 * _buf, int _len )
+void AudioSdl::sdlAudioCallback(void *userdata, SDL_AudioStream *stream, int additional_amount, int total_amount)
 {
-	AudioSdl * _this = static_cast<AudioSdl *>( _udata );
+	AudioSdl * _this = static_cast<AudioSdl *>( userdata );
 
-	_this->sdlAudioCallback( _buf, _len );
+	_this->sdlAudioCallback( stream, additional_amount, total_amount );
 }
 
 
 
 
-void AudioSdl::sdlAudioCallback( Uint8 * _buf, int _len )
+void AudioSdl::sdlAudioCallback( SDL_AudioStream *stream, int additional_amount, int total_amount)
 {
 	if( m_stopped )
 	{
-		memset( _buf, 0, _len );
+		
+		//memset( _buf, 0, _len );
 		return;
 	}
 
-	while( _len )
+	while( total_amount )
 	{
 		if( m_convertedBufPos == 0 )
 		{
@@ -169,7 +167,7 @@ void AudioSdl::sdlAudioCallback( Uint8 * _buf, int _len )
 			if( !frames )
 			{
 				m_stopped = true;
-				memset( _buf, 0, _len );
+				//memset( _buf, 0, _len );
 				return;
 			}
 			m_convertedBufSize = frames * channels()
@@ -177,14 +175,13 @@ void AudioSdl::sdlAudioCallback( Uint8 * _buf, int _len )
 
 			convertToS16( m_outBuf, frames,
 						mixer()->masterGain(),
-						(int_sample_t *)m_convertedBuf,
-						m_convertEndian );
+						(int_sample_t *)m_convertedBuf
+					);
 		}
-		const int min_len = qMin( _len, m_convertedBufSize
+		const int min_len = qMin( total_amount, m_convertedBufSize
 							- m_convertedBufPos );
-		memcpy( _buf, m_convertedBuf + m_convertedBufPos, min_len );
-		_buf += min_len;
-		_len -= min_len;
+		SDL_PutAudioStreamData(stream, m_convertedBuf + m_convertedBufPos, min_len);
+		total_amount -= min_len;
 		m_convertedBufPos += min_len;
 		m_convertedBufPos %= m_convertedBufSize;
 	}

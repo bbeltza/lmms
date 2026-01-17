@@ -56,7 +56,7 @@ OPTION(WANT_PULSEAUDIO	"Include PulseAudio support" ON)
 OPTION(WANT_PORTAUDIO	"Include PortAudio support" ON)
 OPTION(WANT_SNDIO	"Include sndio support" ON)
 OPTION(WANT_SOUNDIO	"Include libsoundio support" ON)
-OPTION(WANT_SDL		"Include SDL (Simple DirectMedia Layer) support" ON)
+OPTION(WANT_SDL3		"Include SDL3 (Simple DirectMedia Layer) support" ON)
 OPTION(WANT_SF2		"Include SoundFont2 player plugin" ON)
 OPTION(WANT_GIG		"Include GIG player plugin" ON)
 OPTION(WANT_STK		"Include Stk (Synthesis Toolkit) support" ON)
@@ -249,25 +249,24 @@ ENDIF(WANT_CARLA)
 
 
 # check for SDL
-IF(WANT_SDL)
+IF(WANT_SDL3)
 	SET(SDL_BUILDING_LIBRARY TRUE)
-	FIND_PACKAGE(SDL)
-	IF(SDL_FOUND)
+	FIND_PACKAGE(SDL3)
+	IF(SDL3_FOUND)
 		SET(LMMS_HAVE_SDL TRUE)
 		SET(STATUS_SDL "OK")
-	ELSE(SDL_FOUND)
-		SET(STATUS_SDL "not found, please install libsdl1.2-dev (or similar) "
+	ELSE(SDL3_FOUND)
+		SET(STATUS_SDL "not found, please install libsdl3-dev (or similar) "
 			"if you require SDL support")
-	ENDIF(SDL_FOUND)
-ENDIF(WANT_SDL)
+	ENDIF(SDL3_FOUND)
+ENDIF(WANT_SDL3)
 IF(NOT LMMS_HAVE_SDL)
-	SET(SDL_INCLUDE_DIR "")
+	SET(SDL3_INCLUDE_DIR "")
 ELSE(NOT LMMS_HAVE_SDL)
-	IF(NOT SDL_INCLUDE_DIR)
-		SET(SDL_INCLUDE_DIR "${CMAKE_FIND_ROOT_PATH}/include")
-	ENDIF(NOT SDL_INCLUDE_DIR)
+	IF(NOT SDL3_INCLUDE_DIR)
+		SET(SDL3_INCLUDE_DIR "${CMAKE_FIND_ROOT_PATH}/include")
+	ENDIF(NOT SDL3_INCLUDE_DIR)
 ENDIF(NOT LMMS_HAVE_SDL)
-
 
 # check for Stk
 IF(WANT_STK)
@@ -652,7 +651,7 @@ MESSAGE(
 "* PortAudio                   : ${STATUS_PORTAUDIO}\n"
 "* libsoundio                  : ${STATUS_SOUNDIO}\n"
 "* PulseAudio                  : ${STATUS_PULSEAUDIO}\n"
-"* SDL                         : ${STATUS_SDL}\n"
+"* SDL3                        : ${STATUS_SDL}\n"
 )
 
 MESSAGE(
