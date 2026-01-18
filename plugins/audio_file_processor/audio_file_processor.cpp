@@ -250,20 +250,31 @@ void audioFileProcessor::loadSettings( const QDomElement & _this )
 		m_sampleBuffer.loadFromBase64( _this.attribute( "srcdata" ) );
 	}
 
-	m_loopModel.loadSettings( _this, "looped" );
-	m_ampModel.loadSettings( _this, "amp" );
-	m_endPointModel.loadSettings( _this, "eframe" );
-	m_startPointModel.loadSettings( _this, "sframe" );
+	bool tmp_ok;
+	const float tmp_eframe = _this.attribute("eframe").toFloat(&tmp_ok);
+	if (tmp_ok && tmp_eframe <= 1.0f)
+    {
+        // compatibility code for having normalized loopback points
+		const float eframe = tmp_eframe;
+		const float sframe = _this.attribute("sframe").toFloat();
+		const float lframe = _this.hasAttribute("lframe") || !(_this.firstChildElement("lframe").isNull())
+		? _this.attribute("lframe").toFloat() : sframe; // compat code for not having a separate loopback point
+		
+		const float frames = m_sampleBuffer.frames();
+		
+		m_endPointModel.setValue(eframe * frames);
+		m_startPointModel.setValue(sframe * frames);
+		m_loopPointModel.setValue(lframe * frames);
+    }
+    else
+    {
+        m_endPointModel.loadSettings( _this, "eframe" );
+        m_startPointModel.loadSettings( _this, "sframe" );
+        m_loopPointModel.loadSettings( _this, "lframe" );
+    }
 
-	// compat code for not having a separate loopback point
-	if (_this.hasAttribute("lframe") || !(_this.firstChildElement("lframe").isNull()))
-	{
-		m_loopPointModel.loadSettings( _this, "lframe" );
-	}
-	else
-	{
-		m_loopPointModel.loadSettings( _this, "sframe" );
-	}
+    m_loopModel.loadSettings( _this, "looped" );
+    m_ampModel.loadSettings( _this, "amp" );
 
 	m_reverseModel.loadSettings( _this, "reversed" );
 

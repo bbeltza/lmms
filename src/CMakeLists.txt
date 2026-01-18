@@ -34,13 +34,7 @@ INCLUDE_DIRECTORIES(
 )
 
 IF(WIN32)
-	SET(WINRC "${CMAKE_BINARY_DIR}/lmmsrc.obj")
-	ADD_CUSTOM_COMMAND(OUTPUT "${WINRC}"
-				COMMAND "${WINDRES}"
-					"-I\"${CMAKE_SOURCE_DIR}\""
-					"-o\"${CMAKE_BINARY_DIR}/lmmsrc.obj\""
-					"-i\"${CMAKE_BINARY_DIR}/lmms.rc\""
-                                DEPENDS "${CMAKE_BINARY_DIR}/lmms.rc")
+	SET(WINRC "${CMAKE_BINARY_DIR}/lmms.rc")
 ENDIF()
 
 SET(lmms_EMBEDDED_RESOURCES "${CMAKE_SOURCE_DIR}/doc/AUTHORS" "${CMAKE_SOURCE_DIR}/LICENSE.txt" "${CONTRIBUTORS}")
@@ -85,33 +79,21 @@ IF(LMMS_BUILD_LINUX)
 ENDIF()
 SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 
-# ADD_LIBRARY's OBJECT is only supported in CMake >=2.8.8
-IF(CMAKE_VERSION VERSION_GREATER "2.8.7")
 
-	ADD_LIBRARY(lmmsobjs OBJECT
-		${LMMS_SRCS}
-		${LMMS_INCLUDES}
-		${LMMS_UI_OUT}
-		${LMMS_ER_H}
-                "${WINRC}"
-	)
-	ADD_EXECUTABLE(lmms
-		core/main.cpp
-		$<TARGET_OBJECTS:lmmsobjs>
-	)
+ADD_LIBRARY(lmmsobjs OBJECT
+	${LMMS_SRCS}
+	${LMMS_INCLUDES}
+	${LMMS_UI_OUT}
+	${LMMS_ER_H}
+	"${WINRC}"
+)
+ADD_EXECUTABLE(lmms
+	core/main.cpp
+	$<TARGET_OBJECTS:lmmsobjs>
+)
 
-    SET(iwyu include-what-you-use -Xiwyu --mapping_file=/usr/share/include-what-you-use/qt5_4.imp)
-    #SET_PROPERTY(TARGET lmmsobjs PROPERTY CXX_INCLUDE_WHAT_YOU_USE ${iwyu})
-ELSE()
-	ADD_EXECUTABLE(lmms
-		core/main.cpp
-		${LMMS_SRCS}
-		${LMMS_INCLUDES}
-		${LMMS_UI_OUT}
-		${LMMS_ER_H}
-                "${WINRC}"
-	)
-ENDIF()
+SET(iwyu include-what-you-use -Xiwyu --mapping_file=/usr/share/include-what-you-use/qt5_4.imp)
+#SET_PROPERTY(TARGET lmmsobjs PROPERTY CXX_INCLUDE_WHAT_YOU_USE ${iwyu})
 
 SET_DIRECTORY_PROPERTIES(PROPERTIES ADDITIONAL_MAKE_CLEAN_FILES "${LMMS_ER_H} ${LMMS_UI_OUT} lmmsconfig.h lmms.1.gz")
 

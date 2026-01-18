@@ -72,7 +72,7 @@ SampleBuffer::SampleBuffer( const QString & _audio_file,
 	m_loopEndFrame( 0 ),
 	m_amplification( 1.0f ),
 	m_reversed( false ),
-	m_frequency( BaseFreq ),
+	m_frequency(BaseFreq),
 	m_sampleRate( mixerSampleRate () )
 {
 	if( _is_base64_data == true )
@@ -98,7 +98,7 @@ SampleBuffer::SampleBuffer( const sampleFrame * _data, const f_cnt_t _frames ) :
 	m_loopEndFrame( 0 ),
 	m_amplification( 1.0f ),
 	m_reversed( false ),
-	m_frequency( BaseFreq ),
+	m_frequency(BaseFreq),
 	m_sampleRate( mixerSampleRate () )
 {
 	if( _frames > 0 )
@@ -126,7 +126,7 @@ SampleBuffer::SampleBuffer( const f_cnt_t _frames ) :
 	m_loopEndFrame( 0 ),
 	m_amplification( 1.0f ),
 	m_reversed( false ),
-	m_frequency( BaseFreq ),
+	m_frequency(BaseFreq),
 	m_sampleRate( mixerSampleRate () )
 {
 	if( _frames > 0 )
@@ -195,7 +195,6 @@ void SampleBuffer::update( bool _keep_settings )
 		int_sample_t * buf = NULL;
 		sample_t * fbuf = NULL;
 		ch_cnt_t channels = DEFAULT_CHANNELS;
-		sample_rate_t samplerate = mixerSampleRate();
 		m_frames = 0;
 
 		const QFileInfo fileInfo( file );
@@ -232,25 +231,25 @@ void SampleBuffer::update( bool _keep_settings )
 			// decoder first if filename extension matches "ogg"
 			if( m_frames == 0 && fileInfo.suffix() == "ogg" )
 			{
-				m_frames = decodeSampleOGGVorbis( file, buf, channels, samplerate );
+				m_frames = decodeSampleOGGVorbis( file, buf, channels, m_sampleRate );
 			}
 #endif
 			if( m_frames == 0 )
 			{
 				m_frames = decodeSampleSF( file, fbuf, channels,
-									samplerate );
+									m_sampleRate );
 			}
 #ifdef LMMS_HAVE_OGGVORBIS
 			if( m_frames == 0 )
 			{
 				m_frames = decodeSampleOGGVorbis( file, buf, channels,
-									samplerate );
+									m_sampleRate );
 			}
 #endif
 			if( m_frames == 0 )
 			{
 				m_frames = decodeSampleDS( file, buf, channels,
-									samplerate );
+									m_sampleRate );
 			}
 		}
 
@@ -267,7 +266,7 @@ void SampleBuffer::update( bool _keep_settings )
         /* Not necessary, it would mess up the frame count
 		else // otherwise normalize sample rate
 		{
-            normalizeSampleRate( samplerate, _keep_settings );
+            normalizeSampleRate( m_sampleRate, _keep_settings );
         } */
 	}
 	else
@@ -662,8 +661,7 @@ bool SampleBuffer::play( sampleFrame * _ab, handleState * _state,
 	// variable for determining if we should currently be playing backwards in a ping-pong loop
 	bool is_backwards = _state->isBackwards();
 
-	const double freq_factor = (double) _freq / (double) m_frequency *
-		m_sampleRate / Engine::mixer()->processingSampleRate();
+	const double freq_factor = _freq / m_frequency * m_sampleRate / Engine::mixer()->processingSampleRate();
 
 	// calculate how many frames we have in requested pitch
 	const f_cnt_t total_frames_for_current_pitch = static_cast<f_cnt_t>( (
@@ -1042,12 +1040,12 @@ QString SampleBuffer::openAudioFile() const
 	{
 		if( ofd.selectedFiles().isEmpty() )
 		{
-			return QString::null;
+			return QString();
 		}
 		return tryToMakeRelative( ofd.selectedFiles()[0] );
 	}
 
-	return QString::null;
+	return QString();
 }
 
 
