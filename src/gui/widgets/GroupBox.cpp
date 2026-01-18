@@ -39,7 +39,7 @@ GroupBox::GroupBox( const QString & _caption, QWidget * _parent ) :
 	QWidget( _parent ),
 	BoolModelView( NULL, this ),
 	m_caption( _caption ),
-	m_titleBarHeight( 11 )
+    m_titleBarHeight( 11 )
 {
 	m_led = new PixmapButton( this, _caption );
 	m_led->setCheckable( true );

@@ -493,7 +493,8 @@ void ConfigManager::loadConfigFile( const QString & configFile )
 #endif
 
 				if( badPath || !QDir( m_artworkDir ).exists() ||
-						!QFile( m_artworkDir + "/style.css" ).exists() )
+						!(QFile( m_artworkDir + "/style.qss" ).exists() || 
+							QFile( m_artworkDir + "/style.css" ).exists()) )
 				{
 					m_artworkDir = defaultArtworkDir();
 				}

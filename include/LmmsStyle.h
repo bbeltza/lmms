@@ -28,11 +28,12 @@
 #define LMMS_STYLE_H
 
 #include <QProxyStyle>
-
-
+#include <QFileSystemWatcher>
+#include <QFile>
 
 class LmmsStyle : public QProxyStyle
 {
+    Q_OBJECT
 public:
 	enum ColorRole
 	{
@@ -90,6 +91,11 @@ private:
 	void hoverColors( bool sunken, bool hover, bool active, QColor& color, QColor& blend ) const;
 	QColor m_colors[ LmmsStyle::NumColorRoles ];
 
+	void setStyle(QFile& file);
+
+	QFileSystemWatcher m_filewatcher;
+public slots:
+	void onFileChanged(const QString&);
 };
 
 #endif

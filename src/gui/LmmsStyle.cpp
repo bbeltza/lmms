@@ -24,7 +24,6 @@
  */
 
 
-#include <QFile>
 #include <QApplication>
 #include <QFrame>
 #include <QPainter>
@@ -127,21 +126,43 @@ void drawPath( QPainter *p, const QPainterPath &path,
 LmmsStyle::LmmsStyle() :
 	QProxyStyle()
 {
-	QFile file( "resources:style.css" );
+	constexpr char CSS_STYLE[] = "resources:style.css";
+	constexpr char QSS_STYLE[] = "resources:style.qss";
+
+	QFile file;
+	if (file.exists(CSS_STYLE))
+		file.setFileName(CSS_STYLE);
+	else
+		file.setFileName(QSS_STYLE);
+
+	m_filewatcher.addPath(file.fileName());
+    connect(&m_filewatcher, SIGNAL(fileChanged(const QString&)), this, SLOT(onFileChanged(const QString&)));
+
+	setStyle(file);
+}
+
+void LmmsStyle::setStyle(QFile& file)
+{
 	file.open( QIODevice::ReadOnly );
 	qApp->setStyleSheet( file.readAll() );
 
 	if( s_palette != NULL ) { qApp->setPalette( *s_palette ); }
 
-#if QT_VERSION >= 0x050000
-	setBaseStyle( QStyleFactory::create( "Fusion" ) );
-#else
-	setBaseStyle( QStyleFactory::create( "Plastique" ) );
-#endif
+	#if QT_VERSION >= 0x050000
+		setBaseStyle( QStyleFactory::create( "Fusion" ) );
+	#else
+		setBaseStyle( QStyleFactory::create( "Plastique" ) );
+	#endif
 }
 
+#include <QDebug>
 
-
+void LmmsStyle::onFileChanged(const QString& path)
+{
+	QFile file(path);
+	setStyle(file);
+	QApplication::setStyle(this);
+}
 
 QPalette LmmsStyle::standardPalette( void ) const
 {

@@ -9,4 +9,5 @@ else
 fi
 
 export PATH=$MINGW/bin:$PATH
+# Uh just use this before the MinGW toolchain files get updated
 cmake -S $PWD/.. -DMINGW_PREFIX=$MINGW $CMAKE_OPTS -DWIN64=1 -DLMMS_BUILD_WIN32=1 $@

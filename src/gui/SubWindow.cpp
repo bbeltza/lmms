@@ -37,7 +37,7 @@
 SubWindow::SubWindow( QWidget *parent, Qt::WindowFlags windowFlags ) :
 	QMdiSubWindow( parent, windowFlags ),
 	m_buttonSize( 17, 17 ),
-	m_titleBarHeight( 24 )
+    m_titleBarHeight( 24 )
 {
 	// initialize the tracked geometry to whatever Qt thinks the normal geometry currently is.
 	// this should always work, since QMdiSubWindows will not start as maximized
@@ -226,7 +226,7 @@ void SubWindow::adjustTitleBar()
 
 	const int rightSpace = 3;
 	const int buttonGap = 1;
-	const int menuButtonSpace = 24;
+    const int menuButtonSpace = m_titleBarHeight;
 
 	QPoint rightButtonPos( width() - rightSpace - m_buttonSize.width(), 3 );
 	QPoint middleButtonPos( width() - rightSpace - ( 2 * m_buttonSize.width() ) - buttonGap, 3 );

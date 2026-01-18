@@ -114,7 +114,7 @@ PluginDescWidget::PluginDescWidget( const Plugin::Descriptor & _pd,
 	m_pluginDescriptor( _pd ),
 	m_logo( _pd.logo->pixmap() ),
 	m_mouseOver( false ),
-	m_targetHeight( 24 )
+    m_targetHeight( 24 )
 {
 	connect( &m_updateTimer, SIGNAL( timeout() ), SLOT( updateHeight() ) );
 	setFixedHeight( m_targetHeight );
