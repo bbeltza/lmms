@@ -53,6 +53,7 @@
 #include "lmmsconfig.h"
 
 #include <iostream>
+#include <cstdint>
 
 #define ALG_EPS 0.000001 // epsilon
 #define ALG_DEFAULT_BPM 100.0 // default tempo
