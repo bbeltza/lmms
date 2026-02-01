@@ -191,16 +191,11 @@ sf2Instrument::sf2Instrument( InstrumentTrack * _instrument_track ) :
     updateReverb();
     updateChorusOn();
     updateChorus();
-    updateGain();
 
 	connect( &m_bankNum, SIGNAL( dataChanged() ), this, SLOT( updatePatch() ) );
 	connect( &m_patchNum, SIGNAL( dataChanged() ), this, SLOT( updatePatch() ) );
 
 	connect( Engine::mixer(), SIGNAL( sampleRateChanged() ), this, SLOT( updateSampleRate() ) );
-
-	// Gain
-	connect( &m_gain, SIGNAL( dataChanged() ), this, SLOT( updateGain() ) );
-
 	// Reverb
 	connect( &m_reverbOn, SIGNAL( dataChanged() ), this, SLOT( updateReverbOn() ) );
 	connect( &m_reverbRoomSize, SIGNAL( dataChanged() ), this, SLOT( updateReverb() ) );
@@ -283,7 +278,6 @@ void sf2Instrument::loadSettings( const QDomElement & _this )
 	m_chorusDepth.loadSettings( _this, "chorusDepth" );
 
 	updatePatch();
-	updateGain();
 }
 
 
@@ -492,25 +486,11 @@ QString sf2Instrument::getCurrentPatchName()
 	return "";
 }
 
-
-
-
-void sf2Instrument::updateGain()
-{
-	fluid_synth_set_gain( m_synth, m_gain.value() );
-}
-
-
-
-
 void sf2Instrument::updateReverbOn()
 {
     qDebug() << fluid_synth_reverb_on( m_synth, m_fxGroup,  m_reverbOn.value() ? 1 : 0);
     qDebug() << fluid_synth_error(m_synth);
 }
-
-
-
 
 void sf2Instrument::updateReverb()
 {
@@ -520,16 +500,10 @@ void sf2Instrument::updateReverb()
     fluid_synth_set_reverb_group_roomsize(m_synth, m_fxGroup, m_reverbRoomSize.value());
 }
 
-
-
-
 void  sf2Instrument::updateChorusOn()
 {
     fluid_synth_set_chorus_on( m_synth, m_chorusOn.value() ? 1 : 0 );
 }
-
-
-
 
 void  sf2Instrument::updateChorus()
 {
@@ -537,8 +511,6 @@ void  sf2Instrument::updateChorus()
 			m_chorusLevel.value(), m_chorusSpeed.value(),
 			m_chorusDepth.value(), 0 );
 }
-
-
 
 void sf2Instrument::updateSampleRate()
 {
@@ -612,6 +584,9 @@ void sf2Instrument::playNote( NotePlayHandle * _n, sampleFrame * )
 	{
 		return;
 	}
+
+	if (fluid_synth_get_gain(m_synth) != m_gain.value()) // This flushes voice updates as a side effect
+		fluid_synth_set_gain( m_synth, m_gain.value() ); // Also update the gain here
 
     int masterPitch = instrumentTrack()->useMasterPitchModel()->value() ? Engine::getSong()->masterPitch() : 0;
     int baseNote = instrumentTrack()->baseNoteModel()->value();
@@ -703,7 +678,7 @@ void sf2Instrument::noteOn( SF2PluginData * n )
         factor <= 0 ? maxBalance : std::min(-200.f * std::log10(factor), maxBalance),
         panning
     );
-    // Set note panning on all the voices
+    // Set note panning on every voice
     for (const auto& voice : n->fluidVoices) {
         if (voice.isValid()) {
             fluid_voice_gen_set(voice.get(), GEN_CUSTOM_BALANCE, balance);
@@ -832,8 +807,6 @@ void sf2Instrument::play( sampleFrame * _working_buffer )
 void sf2Instrument::renderFrames( f_cnt_t frames, sampleFrame * buf )
 {
 	m_synthMutex.lock();
-
-    fluid_synth_get_gain(m_synth); // This flushes voice updates as a side effect
 
     if( m_internalSampleRate < Engine::mixer()->processingSampleRate() &&
                             m_srcState != NULL )

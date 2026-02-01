@@ -103,7 +103,6 @@ public slots:
 	void updateReverb();
 	void updateChorusOn();
 	void updateChorus();
-	void updateGain();
 
 
 private:
