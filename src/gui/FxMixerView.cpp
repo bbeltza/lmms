@@ -237,23 +237,18 @@ void FxMixerView::refreshDisplay()
 void FxMixerView::updateMaxChannelSelector()
 {
 	QVector<Track *> songTrackList = Engine::getSong()->tracks();
-	QVector<Track *> bbTrackList = Engine::getBBTrackContainer()->tracks();
 
-	QVector<Track *> trackLists[] = {songTrackList, bbTrackList};
-	for(int tl=0; tl<2; ++tl)
+	for(int i = 0; i < songTrackList.size(); ++i)
 	{
-		QVector<Track *> trackList = trackLists[tl];
-		for(int i=0; i<trackList.size(); ++i)
+		if( songTrackList[i]->type() == Track::InstrumentTrack )
 		{
-			if( trackList[i]->type() == Track::InstrumentTrack )
-			{
-				InstrumentTrack * inst = (InstrumentTrack *) trackList[i];
-				inst->effectChannelModel()->setRange(0,
-					m_fxChannelViews.size()-1,1);
-			}
+			InstrumentTrack * inst = static_cast<InstrumentTrack*>(songTrackList[i]);
+			inst->effectChannelModel()->setRange(0,
+				m_fxChannelViews.size()-1,1);
 		}
 	}
 }
+
 
 
 void FxMixerView::saveSettings( QDomDocument & _doc, QDomElement & _this )
@@ -428,9 +423,7 @@ void FxMixerView::deleteChannel(int index)
 
 void FxMixerView::deleteUnusedChannels()
 {
-	TrackContainer::TrackList tracks;
-	tracks += Engine::getSong()->tracks();
-	tracks += Engine::getBBTrackContainer()->tracks();
+	TrackContainer::TrackList tracks = Engine::getSong()->tracks();
 
 	// go through all FX Channels
 	for(int i = m_fxChannelViews.size()-1; i > 0; --i)

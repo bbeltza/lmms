@@ -654,7 +654,6 @@ bool AutomationPattern::isAutomated( const AutomatableModel * _m )
 {
 	TrackContainer::TrackList l;
 	l += Engine::getSong()->tracks();
-	l += Engine::getBBTrackContainer()->tracks();
 	l += Engine::getSong()->globalAutomationTrack();
 
 	for( TrackContainer::TrackList::ConstIterator it = l.begin(); it != l.end(); ++it )
@@ -691,7 +690,6 @@ QVector<AutomationPattern *> AutomationPattern::patternsForModel( const Automata
 	QVector<AutomationPattern *> patterns;
 	TrackContainer::TrackList l;
 	l += Engine::getSong()->tracks();
-	l += Engine::getBBTrackContainer()->tracks();
 	l += Engine::getSong()->globalAutomationTrack();
 
 	// go through all tracks...
@@ -762,8 +760,7 @@ AutomationPattern * AutomationPattern::globalAutomationPattern(
 
 void AutomationPattern::resolveAllIDs()
 {
-	TrackContainer::TrackList l = Engine::getSong()->tracks() +
-				Engine::getBBTrackContainer()->tracks();
+	TrackContainer::TrackList l = Engine::getSong()->tracks();
 	l += Engine::getSong()->globalAutomationTrack();
 	for( TrackContainer::TrackList::iterator it = l.begin();
 							it != l.end(); ++it )

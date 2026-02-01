@@ -119,7 +119,6 @@ private:
 
 private slots:
 	void activateListItem( QTreeWidgetItem * item, int column );
-	void openInNewInstrumentTrackBBE( void );
 	void openInNewInstrumentTrackSE( void );
 	void sendToActiveInstrumentTrack( void );
 	void updateDirectory( QTreeWidgetItem * item );

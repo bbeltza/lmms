@@ -39,7 +39,7 @@
 
 
 
-BBEditor::BBEditor( BBTrackContainer* tc ) :
+BBEditor::BBEditor( TrackContainer* tc ) :
 	Editor(false),
 	m_trackContainerView( new BBTrackContainerView(tc) )
 {
@@ -168,7 +168,7 @@ void BBEditor::stop()
 
 
 
-BBTrackContainerView::BBTrackContainerView(BBTrackContainer* tc) :
+BBTrackContainerView::BBTrackContainerView(TrackContainer* tc) :
 	TrackContainerView(tc),
 	m_bbtc(tc)
 {

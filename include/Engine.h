@@ -77,10 +77,12 @@ public:
 		return s_song;
 	}
 
+	#if 0
 	static BBTrackContainer * getBBTrackContainer()
 	{
 		return s_bbTrackContainer;
 	}
+	#endif
 
 	static ProjectJournal * projectJournal()
 	{
@@ -136,9 +138,9 @@ private:
 	static Mixer *s_mixer;
 	static FxMixer * s_fxMixer;
 	static Song * s_song;
-	static BBTrackContainer * s_bbTrackContainer;
-	static ProjectJournal * s_projectJournal;
+	//static BBTrackContainer * s_bbTrackContainer;
 	static DummyTrackContainer * s_dummyTC;
+	static ProjectJournal * s_projectJournal;
 
 	static Ladspa2LMMS * s_ladspaManager;
 

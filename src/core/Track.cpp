@@ -1218,7 +1218,7 @@ void TrackContentWidget::changePosition( const MidiTime & newPos )
 {
 	if( m_trackView->trackContainerView() == gui->getBBEditor()->trackContainerView() )
 	{
-		const int curBB = Engine::getBBTrackContainer()->currentBB();
+		const int curBB = Engine::getSong()->currentBB();
 		setUpdatesEnabled( false );
 
 		// first show TCO for current BB...
@@ -2000,11 +2000,13 @@ Track * Track::create( TrackTypes tt, TrackContainer * tc )
 		default: break;
 	}
 
+	/*
 	if( tc == Engine::getBBTrackContainer() && t )
 	{
 		t->createTCOsForBB( Engine::getBBTrackContainer()->numOfBBs()
 									- 1 );
 	}
+	*/
 
 	tc->updateAfterTrackAdd();
 

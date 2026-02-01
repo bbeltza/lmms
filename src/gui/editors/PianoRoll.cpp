@@ -3420,11 +3420,13 @@ QList<int> PianoRoll::getAllOctavesForKey( int keyToMirror ) const
 
 Song::PlayModes PianoRoll::desiredPlayModeForAccompany() const
 {
+	/*
 	if( m_pattern->getTrack()->trackContainer() ==
 					Engine::getBBTrackContainer() )
 	{
 		return Song::Mode_PlayBB;
 	}
+	*/
 	return Song::Mode_PlaySong;
 }
 

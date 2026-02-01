@@ -138,20 +138,6 @@ void RenderManager::renderTracks()
 		}
 	}
 
-	const TrackContainer::TrackList t2 = Engine::getBBTrackContainer()->tracks();
-	for( auto it = t2.begin(); it != t2.end(); ++it )
-	{
-		Track* tk = (*it);
-		Track::TrackTypes type = tk->type();
-
-		// Don't render automation tracks
-		if ( tk->isMuted() == false &&
-				( type == Track::InstrumentTrack || type == Track::SampleTrack ) )
-		{
-			m_unmuted.push_back(tk);
-		}
-	}
-
 	// copy the list of unmuted tracks into our rendering queue.
 	// we need to remember which tracks were unmuted to restore state at the end.
 	m_tracksToRender = m_unmuted;

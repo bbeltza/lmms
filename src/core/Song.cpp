@@ -219,10 +219,9 @@ void Song::processNextBuffer()
 			break;
 
 		case Mode_PlayBB:
-			if( Engine::getBBTrackContainer()->numOfBBs() > 0 )
+			if( numOfBBs() > 0 )
 			{
-				tcoNum = Engine::getBBTrackContainer()->
-								currentBB();
+				tcoNum = currentBB();
 				trackList.push_back( BBTrack::findBBTrack(
 								tcoNum ) );
 			}
@@ -305,8 +304,7 @@ void Song::processNextBuffer()
 				// or to loop back to first tact
 				if( m_playMode == Mode_PlayBB )
 				{
-					maxTact = Engine::getBBTrackContainer()
-							->lengthOfCurrentBB();
+					maxTact = lengthOfCurrentBB();
 				}
 				else if( m_playMode == Mode_PlayPattern &&
 					m_loopPattern == true &&
@@ -440,8 +438,6 @@ void Song::processAutomations(const TrackList &tracklist, MidiTime timeStart, fp
 		Q_ASSERT(tracklist.size() == 1);
 		Q_ASSERT(tracklist.at(0)->type() == Track::BBTrack);
 		auto bbTrack = dynamic_cast<BBTrack*>(tracklist.at(0));
-		auto bbContainer = Engine::getBBTrackContainer();
-		container = bbContainer;
 		tcoNum = bbTrack->index();
 	}
 		break;
@@ -801,8 +797,10 @@ void Song::removeBar()
 
 void Song::addBBTrack()
 {
-	Track * t = Track::create( Track::BBTrack, this );
-	Engine::getBBTrackContainer()->setCurrentBB( dynamic_cast<BBTrack *>( t )->index() );
+	// Should not really use dynamic_cast since it is certainly garanteed that this returns a BBTrack
+	auto t = dynamic_cast<BBTrack*>(Track::create( Track::BBTrack, this ));
+	assert(t != NULL);
+	setCurrentBB( t->index() );
 }
 
 
@@ -876,7 +874,6 @@ void Song::clearProject()
 		gui->fxMixerView()->clear();
 	}
 	QCoreApplication::sendPostedEvents();
-	Engine::getBBTrackContainer()->clearAllTracks();
 	clearAllTracks();
 
 	Engine::fxMixer()->clear();
@@ -953,14 +950,11 @@ void Song::createNewProject()
 
 	m_fileName = m_oldFileName = "";
 
-	Track * t;
-	t = Track::create( Track::InstrumentTrack, this );
-	dynamic_cast<InstrumentTrack * >( t )->loadInstrument(
-					"tripleoscillator" );
-	t = Track::create( Track::InstrumentTrack,
-						Engine::getBBTrackContainer() );
-	dynamic_cast<InstrumentTrack * >( t )->loadInstrument(
-						"kicker" );
+	dynamic_cast<InstrumentTrack*>( Track::create(Track::InstrumentTrack, this) )
+									-> loadInstrument("tripleoscillator");
+	dynamic_cast<InstrumentTrack*>( Track::create(Track::InstrumentTrack, this) )
+									-> loadInstrument("kicker");
+
 	Track::create( Track::SampleTrack, this );
 	Track::create( Track::BBTrack, this );
 	Track::create( Track::AutomationTrack, this );
@@ -973,8 +967,6 @@ void Song::createNewProject()
 	QCoreApplication::instance()->processEvents();
 
 	m_loadingProject = false;
-
-	Engine::getBBTrackContainer()->updateAfterTrackAdd();
 
 	Engine::projectJournal()->setJournalling( true );
 
@@ -1138,7 +1130,7 @@ void Song::loadProject( const QString & fileName )
 
 	// quirk for fixing projects with broken positions of TCOs inside
 	// BB-tracks
-	Engine::getBBTrackContainer()->fixIncorrectPositions();
+	//Engine::getBBTrackContainer()->fixIncorrectPositions();
 
 	// Connect controller links to their controllers 
 	// now that everything is loaded
@@ -1177,7 +1169,7 @@ void Song::loadProject( const QString & fileName )
 		}
 		else
 		{
-			QTextStream(stderr) << Engine::getSong()->errorSummary() << endl;
+			QTextStream(stderr) << Engine::getSong()->errorSummary() << Qt::endl;
 		}
 	}
 
@@ -1486,15 +1478,13 @@ void Song::exportProjectMidi()
 		
 		// instantiate midi export plugin
 		TrackContainer::TrackList tracks;
-		TrackContainer::TrackList tracks_BB;
 		tracks = Engine::getSong()->tracks();
-		tracks_BB = Engine::getBBTrackContainer()->tracks();
 		ExportFilter *exf = dynamic_cast<ExportFilter *> (Plugin::instantiate("midiexport", NULL, NULL));
 		if (exf==NULL) {
 			qDebug() << "failed to load midi export filter!";
 			return;
 		}
-		exf->tryExport(tracks, tracks_BB, getTempo(), m_masterPitchModel.value(), export_filename);
+		exf->tryExport(tracks, getTempo(), m_masterPitchModel.value(), export_filename);
 	}
 }
 

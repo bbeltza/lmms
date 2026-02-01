@@ -1756,7 +1756,7 @@ void AutomationEditor::play()
 	}
 	else if( inBBEditor() )
 	{
-		Engine::getBBTrackContainer()->play();
+		//Engine::getBBTrackContainer()->play();
 	}
 	else
 	{
@@ -1784,7 +1784,7 @@ void AutomationEditor::stop()
 	}
 	if( m_pattern->getTrack() && inBBEditor() )
 	{
-		Engine::getBBTrackContainer()->stop();
+		//Engine::getBBTrackContainer()->stop();
 	}
 	else
 	{

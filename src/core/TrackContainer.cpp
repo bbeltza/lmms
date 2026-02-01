@@ -309,13 +309,13 @@ AutomatedValueMap TrackContainer::automatedValuesFromTracks(const TrackList &tra
 		else if (auto* bb = dynamic_cast<BBTCO *>(tco))
 		{
 			auto bbIndex = dynamic_cast<class BBTrack*>(bb->getTrack())->index();
-			auto bbContainer = Engine::getBBTrackContainer();
+			auto song = Engine::getSong();
 
 			MidiTime bbTime = time - tco->startPosition();
 			bbTime = std::min(bbTime, tco->length());
-			bbTime = bbTime % (bbContainer->lengthOfBB(bbIndex) * MidiTime::ticksPerTact());
+			bbTime = bbTime % (song->lengthOfBB(bbIndex) * MidiTime::ticksPerTact());
 
-			auto bbValues = bbContainer->automatedValuesAt(bbTime, bbIndex);
+			auto bbValues = song->automatedValuesAt(bbTime, bbIndex);
 			for (auto it=bbValues.begin(); it != bbValues.end(); it++)
 			{
 				// override old values, bb track with the highest index takes precedence

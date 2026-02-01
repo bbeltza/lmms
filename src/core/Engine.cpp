@@ -37,11 +37,11 @@
 float LmmsCore::s_framesPerTick;
 Mixer* LmmsCore::s_mixer = NULL;
 FxMixer * LmmsCore::s_fxMixer = NULL;
-BBTrackContainer * LmmsCore::s_bbTrackContainer = NULL;
 Song * LmmsCore::s_song = NULL;
 ProjectJournal * LmmsCore::s_projectJournal = NULL;
 Ladspa2LMMS * LmmsCore::s_ladspaManager = NULL;
 DummyTrackContainer * LmmsCore::s_dummyTC = NULL;
+//BBTrackContainer * LmmsCore::s_bbTrackContainer = NULL;
 
 
 
@@ -59,7 +59,7 @@ void LmmsCore::init( bool renderOnly )
 	s_mixer = new Mixer( renderOnly );
 	s_song = new Song;
 	s_fxMixer = new FxMixer;
-	s_bbTrackContainer = new BBTrackContainer;
+	//s_bbTrackContainer = new BBTrackContainer;
 
 	s_ladspaManager = new Ladspa2LMMS;
 
@@ -87,7 +87,7 @@ void LmmsCore::destroy()
 
 	s_song->clearProject();
 
-	deleteHelper( &s_bbTrackContainer );
+	//deleteHelper( &s_bbTrackContainer );
 	deleteHelper( &s_dummyTC );
 
 	deleteHelper( &s_fxMixer );

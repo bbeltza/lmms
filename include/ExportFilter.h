@@ -40,7 +40,6 @@ public:
 
 
 	virtual bool tryExport(const TrackContainer::TrackList &tracks,
-				const TrackContainer::TrackList &tracksBB,
 				int tempo, int masterPitch, const QString &filename ) = 0;
 protected:
 

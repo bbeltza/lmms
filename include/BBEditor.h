@@ -30,7 +30,6 @@
 #include "TrackContainerView.h"
 
 
-class BBTrackContainer;
 class ComboBox;
 
 class BBTrackContainerView;
@@ -39,7 +38,7 @@ class BBEditor : public Editor
 {
 	Q_OBJECT
 public:
-	BBEditor( BBTrackContainer * _tc );
+	BBEditor( TrackContainer * _tc );
 	~BBEditor();
 
 	QSize sizeHint() const;
@@ -68,7 +67,7 @@ class BBTrackContainerView : public TrackContainerView
 {
 	Q_OBJECT
 public:
-	BBTrackContainerView(BBTrackContainer* tc);
+	BBTrackContainerView(TrackContainer* tc);
 
 	bool fixedTCOs() const
 	{
@@ -92,7 +91,7 @@ protected slots:
 	void updatePosition();
 
 private:
-	BBTrackContainer * m_bbtc;
+	TrackContainer * m_bbtc;
 	void makeSteps( bool clone );
 };
 

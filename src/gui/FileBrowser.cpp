@@ -627,7 +627,7 @@ void FileBrowserTreeWidget::activateListItem(QTreeWidgetItem * item,
 	{
 		InstrumentTrack * it = dynamic_cast<InstrumentTrack *>(
 				Track::create( Track::InstrumentTrack,
-					Engine::getBBTrackContainer() ) );
+					Engine::getSong() ) );
 		handleFile( f, it );
 	}
 }
@@ -646,24 +646,10 @@ void FileBrowserTreeWidget::openInNewInstrumentTrack( TrackContainer* tc )
 	}
 }
 
-
-
-
-void FileBrowserTreeWidget::openInNewInstrumentTrackBBE( void )
-{
-	openInNewInstrumentTrack( Engine::getBBTrackContainer() );
-}
-
-
-
-
 void FileBrowserTreeWidget::openInNewInstrumentTrackSE( void )
 {
 	openInNewInstrumentTrack( Engine::getSong() );
 }
-
-
-
 
 void FileBrowserTreeWidget::sendToActiveInstrumentTrack( void )
 {
