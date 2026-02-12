@@ -30,6 +30,7 @@
 
 #include "Track.h"
 #include "JournallingObject.h"
+#include "ComboBoxModel.h"
 
 
 class AutomationPattern;
@@ -40,13 +41,9 @@ class TrackContainerView;
 class EXPORT TrackContainer : public Model, public JournallingObject
 {
 	Q_OBJECT
+	mapPropertyFromModel(int,currentBB,setCurrentBB,m_bbComboBoxModel);
 public:
 	typedef QVector<Track *> TrackList;
-	enum TrackContainerTypes
-	{
-		BBContainer,
-		SongContainer
-	} ;
 
 	TrackContainer();
 	virtual ~TrackContainer();
@@ -55,6 +52,21 @@ public:
 
 	virtual void loadSettings( const QDomElement & _this );
 
+	// BB related
+	bool BBplay( MidiTime _start, const fpp_t _frames,
+						const f_cnt_t _frame_base, int _tco_num = -1 );
+	tact_t lengthOfBB( int _bb ) const;
+	tact_t lengthOfCurrentBB() const { return lengthOfBB( currentBB() ); }
+
+	int numBBs() const;
+	
+	void removeBB( int _bb );
+	void swapBB( int _bb1, int _bb2 );
+	public slots:
+		void updateComboBox();
+		void currentBBChanged();
+	//
+public:
 
 	virtual AutomationPattern * tempoAutomationPattern()
 	{
@@ -83,16 +95,6 @@ public:
 		return "trackcontainer";
 	}
 
-	inline void setType( TrackContainerTypes newType )
-	{
-		m_TrackContainerType = newType;
-	}
-
-	inline TrackContainerTypes type() const
-	{
-		return m_TrackContainerType;
-	}
-
 	virtual AutomatedValueMap automatedValuesAt(MidiTime time, int tcoNum = -1) const;
 
 signals:
@@ -105,13 +107,11 @@ protected:
 
 private:
 	TrackList m_tracks;
-
-	TrackContainerTypes m_TrackContainerType;
-
+	ComboBoxModel m_bbComboBoxModel;
 
 	friend class TrackContainerView;
 	friend class Track;
-
+	friend class BBEditor;
 } ;
 
 

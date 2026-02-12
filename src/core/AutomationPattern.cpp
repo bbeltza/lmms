@@ -52,6 +52,8 @@ AutomationPattern::AutomationPattern( AutomationTrack * _auto_track ) :
 	m_lastRecordedValue( 0 )
 {
 	changeLength( MidiTime( 1, 0 ) );
+	setAutoResize( false );
+	/*
 	if( getTrack() )
 	{
 		switch( getTrack()->trackContainer()->type() )
@@ -67,6 +69,7 @@ AutomationPattern::AutomationPattern( AutomationTrack * _auto_track ) :
 				break;
 		}
 	}
+		*/
 }
 
 
@@ -85,6 +88,8 @@ AutomationPattern::AutomationPattern( const AutomationPattern & _pat_to_copy ) :
 		m_timeMap[it.key()] = it.value();
 		m_tangents[it.key()] = _pat_to_copy.m_tangents[it.key()];
 	}
+	setAutoResize( false );
+	/* Gotta really have a way to check if you're in a Beat/Bassline track or in the global song one
 	switch( getTrack()->trackContainer()->type() )
 	{
 		case TrackContainer::BBContainer:
@@ -97,6 +102,7 @@ AutomationPattern::AutomationPattern( const AutomationPattern & _pat_to_copy ) :
 			setAutoResize( false );
 			break;
 	}
+	*/
 }
 
 

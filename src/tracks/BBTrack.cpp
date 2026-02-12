@@ -50,7 +50,7 @@ BBTCO::BBTCO( Track * _track ) :
 	m_color( 128, 128, 128 ),
 	m_useStyleColor( true )
 {
-	tact_t t = Engine::getBBTrackContainer()->lengthOfBB( bbTrackIndex() );
+	tact_t t = Engine::getSong()->lengthOfBB( bbTrackIndex() );
 	if( t > 0 )
 	{
 		saveJournallingState( false );
@@ -254,7 +254,7 @@ void BBTCOView::paintEvent( QPaintEvent * )
 	const int lineSize = 3;
 	p.setPen( c.darker( 200 ) );
 
-	tact_t t = Engine::getBBTrackContainer()->lengthOfBB( m_bbTCO->bbTrackIndex() );
+	tact_t t = Engine::getSong()->lengthOfBB( m_bbTCO->bbTrackIndex() );
 	if( m_bbTCO->length() > MidiTime::ticksPerTact() && t > 0 )
 	{
 		for( int x = static_cast<int>( t * pixelsPerTact() );
@@ -317,7 +317,7 @@ void BBTCOView::paintEvent( QPaintEvent * )
 
 void BBTCOView::openInBBEditor()
 {
-	Engine::getBBTrackContainer()->setCurrentBB( m_bbTCO->bbTrackIndex() );
+	Engine::getSong()->setCurrentBB( m_bbTCO->bbTrackIndex() );
 
 	gui->mainWindow()->toggleBBEditorWin( true );
 }
@@ -412,9 +412,9 @@ BBTrack::BBTrack( TrackContainer* tc ) :
 	s_infoMap[this] = bbNum;
 
 	setName( tr( "Beat/Bassline %1" ).arg( bbNum ) );
-	Engine::getBBTrackContainer()->createTCOsForBB( bbNum );
-	Engine::getBBTrackContainer()->setCurrentBB( bbNum );
-	Engine::getBBTrackContainer()->updateComboBox();
+	Engine::getSong()->createTCOsForBB( bbNum );
+	Engine::getSong()->setCurrentBB( bbNum );
+	Engine::getSong()->updateComboBox();
 
 	connect( this, SIGNAL( nameChanged() ),
 		Engine::getBBTrackContainer(), SLOT( updateComboBox() ) );
@@ -431,7 +431,7 @@ BBTrack::~BBTrack()
 					| PlayHandle::TypeSamplePlayHandle );
 
 	const int bb = s_infoMap[this];
-	Engine::getBBTrackContainer()->removeBB( bb );
+	Engine::getSong()->removeBB( bb );
 	for( infoMap::iterator it = s_infoMap.begin(); it != s_infoMap.end();
 									++it )
 	{
@@ -445,7 +445,7 @@ BBTrack::~BBTrack()
 	// remove us from TC so bbTrackContainer::numOfBBs() returns a smaller
 	// value and thus combobox-updating in bbTrackContainer works well
 	trackContainer()->removeTrack( this );
-	Engine::getBBTrackContainer()->updateComboBox();
+	Engine::getSong()->updateComboBox();
 }
 
 
@@ -462,7 +462,7 @@ bool BBTrack::play( const MidiTime & _start, const fpp_t _frames,
 
 	if( _tco_num >= 0 )
 	{
-		return Engine::getBBTrackContainer()->play( _start, _frames, _offset, s_infoMap[this] );
+		return Engine::getSong()->BBplay( _start, _frames, _offset, s_infoMap[this] );
 	}
 
 	tcoVector tcos;
@@ -487,7 +487,7 @@ bool BBTrack::play( const MidiTime & _start, const fpp_t _frames,
 
 	if( _start - lastPosition < lastLen )
 	{
-		return Engine::getBBTrackContainer()->play( _start - lastPosition, _frames, _offset, s_infoMap[this] );
+		return Engine::getSong()->BBplay( _start - lastPosition, _frames, _offset, s_infoMap[this] );
 	}
 	return false;
 }
@@ -527,7 +527,7 @@ void BBTrack::saveTrackSpecificSettings( QDomDocument & _doc,
 			_this.parentNode().parentNode().nodeName() != "clone" &&
 			_this.parentNode().parentNode().nodeName() != "journaldata" )
 	{
-		( (JournallingObject *)( Engine::getBBTrackContainer() ) )->
+		( (JournallingObject *)( Engine::getSong() ) )->
 						saveState( _doc, _this );
 	}
 	if( _this.parentNode().parentNode().nodeName() == "clone" )
@@ -551,7 +551,7 @@ void BBTrack::loadTrackSpecificSettings( const QDomElement & _this )
 		const int src = _this.attribute( "clonebbt" ).toInt();
 		const int dst = s_infoMap[this];
 		TrackContainer::TrackList tl =
-					Engine::getBBTrackContainer()->tracks();
+					Engine::getSong()->tracks();
 		// copy TCOs of all tracks from source BB (at bar "src") to destination
 		// TCOs (which are created if they do not exist yet)
 		for( TrackContainer::TrackList::iterator it = tl.begin();
@@ -569,7 +569,7 @@ void BBTrack::loadTrackSpecificSettings( const QDomElement & _this )
 					TrackContainer::classNodeName() );
 		if( node.isElement() )
 		{
-			( (JournallingObject *)Engine::getBBTrackContainer() )->
+			( (JournallingObject *)Engine::getSong() )->
 					restoreState( node.toElement() );
 		}
 	}
@@ -609,9 +609,9 @@ void BBTrack::swapBBTracks( Track * _track1, Track * _track2 )
 	if( t1 != NULL && t2 != NULL )
 	{
 		qSwap( s_infoMap[t1], s_infoMap[t2] );
-		Engine::getBBTrackContainer()->swapBB( s_infoMap[t1],
+		Engine::getSong()->swapBB( s_infoMap[t1],
 								s_infoMap[t2] );
-		Engine::getBBTrackContainer()->setCurrentBB( s_infoMap[t1] );
+		Engine::getSong()->setCurrentBB( s_infoMap[t1] );
 	}
 }
 
@@ -663,6 +663,6 @@ bool BBTrackView::close()
 
 void BBTrackView::clickedTrackLabel()
 {
-	Engine::getBBTrackContainer()->setCurrentBB( m_bbTrack->index() );
+	Engine::getSong()->setCurrentBB( m_bbTrack->index() );
 	gui->getBBEditor()->parentWidget()->show();
 }

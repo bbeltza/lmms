@@ -85,6 +85,8 @@ SampleTCO::SampleTCO( Track * _track ) :
 	//care about TCO position
 	connect( this, SIGNAL( positionChanged() ), this, SLOT( updateTrackTcos() ) );
 
+	setAutoResize( false );
+	/*
 	switch( getTrack()->trackContainer()->type() )
 	{
 		case TrackContainer::BBContainer:
@@ -97,6 +99,7 @@ SampleTCO::SampleTCO( Track * _track ) :
 			setAutoResize( false );
 			break;
 	}
+			*/
 	updateTrackTcos();
 }
 
@@ -615,7 +618,7 @@ bool SampleTrack::play( const MidiTime & _start, const fpp_t _frames,
 			return false;
 		}
 		tcos.push_back( getTCO( _tco_num ) );
-		if (trackContainer() == (TrackContainer*)Engine::getBBTrackContainer())
+		if ( isInBB() )
 		{
 			bb_track = BBTrack::findBBTrack( _tco_num );
 		}

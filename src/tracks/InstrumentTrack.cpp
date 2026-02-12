@@ -623,10 +623,7 @@ bool InstrumentTrack::play( const MidiTime & _start, const fpp_t _frames,
 	{
 		TrackContentObject * tco = getTCO( _tco_num );
 		tcos.push_back( tco );
-		if (trackContainer() == (TrackContainer*)Engine::getBBTrackContainer())
-		{
-			bb_track = BBTrack::findBBTrack( _tco_num );
-		}
+		bb_track = tco->getBBTrack();
 	}
 	else
 	{

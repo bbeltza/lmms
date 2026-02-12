@@ -1723,7 +1723,7 @@ inline bool AutomationEditor::inBBEditor()
 {
 	QMutexLocker m( &m_patternMutex );
 	return( validPattern() &&
-				m_pattern->getTrack()->trackContainer() == Engine::getBBTrackContainer() );
+				m_pattern->isInBB() );
 }
 
 

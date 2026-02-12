@@ -8,7 +8,7 @@ set(LMMS_SRCS
 	core/AutomationPattern.cpp
 	core/BandLimitedWave.cpp
 	core/base64.cpp
-	core/BBTrackContainer.cpp
+	#core/BBTrackContainer.cpp
 	core/BufferManager.cpp
 	core/Clipboard.cpp
 	core/ComboBoxModel.cpp

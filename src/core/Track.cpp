@@ -92,9 +92,10 @@ TextFloat * TrackContentObjectView::s_textFloat = NULL;
  *
  * \param _track The track that will contain the new object
  */
-TrackContentObject::TrackContentObject( Track * track ) :
+TrackContentObject::TrackContentObject( Track * track, BBTrack* bbtrack ) :
 	Model( track ),
 	m_track( track ),
+	m_bbtrack( bbtrack ),
 	m_name( QString::null ),
 	m_startPosition(),
 	m_length(),

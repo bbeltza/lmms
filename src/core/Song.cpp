@@ -113,7 +113,6 @@ Song::Song() :
 			this, SLOT( masterPitchChanged() ) );*/
 
 	qRegisterMetaType<Note>( "Note" );
-	setType( SongContainer );
 }
 
 
@@ -219,7 +218,7 @@ void Song::processNextBuffer()
 			break;
 
 		case Mode_PlayBB:
-			if( numOfBBs() > 0 )
+			if( numBBs() > 0 )
 			{
 				tcoNum = currentBB();
 				trackList.push_back( BBTrack::findBBTrack(

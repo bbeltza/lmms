@@ -57,8 +57,7 @@ Pattern::Pattern( InstrumentTrack * _instrument_track ) :
 	m_steps( MidiTime::stepsPerTact() )
 {
 	setName( _instrument_track->name() );
-	if( _instrument_track->trackContainer()
-					== Engine::getBBTrackContainer() )
+	if( isInBB() )
 	{
 		resizeToFirstTrack();
 	}
@@ -81,18 +80,7 @@ Pattern::Pattern( const Pattern& other ) :
 	}
 
 	init();
-	switch( getTrack()->trackContainer()->type() )
-	{
-		case TrackContainer::BBContainer:
-			setAutoResize( true );
-			break;
-
-		case TrackContainer::SongContainer:
-			// move down
-		default:
-			setAutoResize( false );
-			break;
-	}
+	setAutoResize(isInBB());
 }
 
 
@@ -521,9 +509,9 @@ TrackContentObjectView * Pattern::createView( TrackView * _tv )
 
 void Pattern::updateBBTrack()
 {
-	if( getTrack()->trackContainer() == Engine::getBBTrackContainer() )
+	if( isInBB() )
 	{
-		Engine::getBBTrackContainer()->updateBBTrack( this );
+		Engine::getSong()->updateBBTrack( this );
 	}
 
 	if( gui && gui->pianoRoll() && gui->pianoRoll()->currentPattern() == this )

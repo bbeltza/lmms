@@ -260,7 +260,7 @@ void BBTrackContainerView::dropEvent(QDropEvent* de)
 
 		// Ensure BB TCOs exist
 		bool hasValidBBTCOs = false;
-		if (t->getTCOs().size() == m_bbtc->numOfBBs())
+		if (t->getTCOs().size() == m_bbtc->numBBs())
 		{
 			hasValidBBTCOs = true;
 			for (int i = 0; i < t->getTCOs().size(); ++i)
@@ -275,7 +275,7 @@ void BBTrackContainerView::dropEvent(QDropEvent* de)
 		if (!hasValidBBTCOs)
 		{
 			t->deleteTCOs();
-			t->createTCOsForBB(m_bbtc->numOfBBs() - 1);
+			t->createTCOsForBB(m_bbtc->numBBs() - 1);
 		}
 		m_bbtc->updateAfterTrackAdd();
 

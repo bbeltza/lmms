@@ -48,6 +48,7 @@ class QPushButton;
 
 class PixmapButton;
 class TextFloat;
+class BBTrack;
 class Track;
 class TrackContentObjectView;
 class TrackContainer;
@@ -73,7 +74,7 @@ const int DEFAULT_TRACK_HEIGHT = 32;
 
 const int TCO_BORDER_WIDTH = 2;
 
-char const *const FILENAME_FILTER = "[\\0000-\x1f\"*/:<>?\\\\|\x7f]";
+char const FILENAME_FILTER[] = "[\\0000-\x1f\"*/:<>?\\\\|\x7f]";
 
 
 class TrackContentObject : public Model, public JournallingObject
@@ -83,13 +84,19 @@ class TrackContentObject : public Model, public JournallingObject
 	mapPropertyFromModel(bool,isMuted,setMuted,m_mutedModel);
 	mapPropertyFromModel(bool,isSolo,setSolo,m_soloModel);
 public:
-	TrackContentObject( Track * track );
+	TrackContentObject( Track * track, BBTrack * bbtrack=NULL );
 	virtual ~TrackContentObject();
 
+	inline BBTrack * getBBTrack() const
+	{
+		return m_bbtrack;
+	}
 	inline Track * getTrack() const
 	{
 		return m_track;
 	}
+
+	inline bool isInBB() const { return getBBTrack() != nullptr; }
 
 	inline const QString & name() const
 	{
@@ -173,6 +180,7 @@ private:
 	} ;
 
 	Track * m_track;
+	BBTrack * m_bbtrack;
 	QString m_name;
 
 	MidiTime m_startPosition;
@@ -181,11 +189,9 @@ private:
 	BoolModel m_mutedModel;
 	BoolModel m_soloModel;
 	bool m_autoResize;
-
 	bool m_selectViewOnCreate;
 
 	friend class TrackContentObjectView;
-
 } ;
 
 
